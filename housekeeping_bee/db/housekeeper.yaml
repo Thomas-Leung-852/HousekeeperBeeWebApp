@@ -1,0 +1,25 @@
+version: '2'
+
+services:
+  postgres_container:
+    image: bitnami/postgresql:16.4.0-debian-12-r12
+    restart: always
+    ports:
+      - 5432:5432
+    networks:
+      - housekeeper-network
+    environment:
+      - POSTGRES_PASSWORD=${PG_HOUSEKEEPER_PWD}
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=housekeeper2024v1
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+
+
+volumes:
+  pg_data: {}
+
+networks:
+  housekeeper-network:
+    external: false
+    name: housekeeper-network

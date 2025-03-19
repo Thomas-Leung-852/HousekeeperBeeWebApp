@@ -1,0 +1,372 @@
+************************************************************************************************************************************************
+
+PART A - Install Ubuntu 24.04.2 LTS Linux OS to raspberry pi 5
+
+************************************************************************************************************************************************
+
+1. Down Raspberry imager from https://www.raspberrypi.com/software/
+2. Install imager
+3. Insert 32GB micro SD card 
+4. launch imager 
+5. "CHOOSE DEVICE" >> select "Raspberry pi 5"
+6. "CHOOSE OS" >> "Other general-purpose OS" >> Ubuntu >> "Ubuntu Desktop 24.04.2 LTS (64-bit)"
+7. "CHOOSE STORAGE" >> choose USB Device - 32GB
+8. Click "NEXT"
+
+************************************************************************************************************************************************
+
+PART B - Setup Ubuntu OS 
+
+************************************************************************************************************************************************
+
+Forward the instruction to complete the Ubuntu setup 
+
+Create user account:
+
+1. Name: thomas
+2. Password: abc123
+3. Select: Auto login 
+
+Important: DO NOT choose "Ubuntu Pro"
+
+
+************************************************************************************************************************************************
+
+PART C - Install apt packages, docker, postgreSQL database and setup web application
+
+************************************************************************************************************************************************
+
+Update bluetooth, if bluetooth option dim color.
+sudo apt install pi-bluetooth
+sudo reboot
+
+========================================================================================================================================
+[0] update apt and install ifconfig
+========================================================================================================================================
+1. sudo apt update && sudo apt upgrade -y
+2. sudo apt install net-tools
+
+========================================================================================================================================
+[1] install SSH
+https://greenwebpage.com/community/how-to-enable-ssh-on-ubuntu-24-04/?amp=1&gad_source=1&gclid=EAIaIQobChMIwvehpJjkiwMV5almAh11cyv1EAAYASAAEgJ4_PD_BwE
+========================================================================================================================================
+
+1. sudo apt update
+2. sudo apt install openssh-client openssh-server -y
+3. sudo systemctl start ssh
+4. sudo systemctl enable ssh
+5. sudo nano /etc/ssh/sshd_config
+   update port to 22
+6. sudo ufw enable
+7. sudo ufw allow 22
+8. sudo ufw reload
+9. sudo systemctl status ssh
+
+====================================================================================================================================
+[2]. install docker - https://docs.docker.com/engine/install/ubuntu/
+====================================================================================================================================
+
+# Add Docker's official GPG key:
+sudo apt-get update
+sudo apt-get install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+# Add the repository to Apt sources:
+# 1. input the following code block to terminal
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+  
+# 2. update 
+  
+sudo apt-get update
+
+# Install docker engine, docker compose and cli 
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+#test
+sudo docker run hello-world
+
+====================================================================================================================================
+[3] config rootless docker - https://docs.docker.com/engine/security/rootless/
+====================================================================================================================================
+
+Steps:
+a. id -u
+b. whoami
+c. grep ^$(whoami): /etc/subuid
+d. sudo apt-get install -y dbus-user-session
+e. sudo apt-get install -y uidmap
+f. sudo apt-get install -y systemd-container
+
+g. filename=$(echo $HOME/bin/rootlesskit | sed -e s@^/@@ -e s@/@.@g)
+h. input the following code block to terminal:
+
+cat <<EOF > ~/${filename}
+abi <abi/4.0>,
+include <tunables/global>
+
+"$HOME/bin/rootlesskit" flags=(unconfined) {
+  userns,
+
+  include if exists <local/${filename}>
+}
+EOF
+
+i. sudo mv ~/${filename} /etc/apparmor.d/${filename}
+j. systemctl restart apparmor.service
+k. sudo usermod -a -G docker $USER
+l. reboot
+
+====================================================================================================================================
+[4] SSH copy source files to Raspberry pi
+====================================================================================================================================
+
+1. Download the Zip file from vNetic workshop web site
+2. Uncompress the Zip file
+3. Use WinSCP to copy the "housekeeping_bee", "HousekeeperBackup_initial_db" and "prod env setup.txt" folder to Raspberry Pi's Desktop folder 
+4. checking
+
+The following folders and files should existing in Raspberry pi:
+ 
+~/Desktop/HousekeeperBackup_initial_db
+~/Desktop/housekeeping_bee
+~/Desktop/housekeeping_bee/backup
+~/Desktop/housekeeping_bee/db
+~/Desktop/housekeeping_bee/files
+~/Desktop/housekeeping_bee/files/prog
+~/Desktop/housekeeping_bee/files/prog/admin
+~/Desktop/housekeeping_bee/files/prog/admin/scheduler
+~/Desktop/housekeeping_bee/files/sys
+~/Desktop/housekeeping_bee/files/sys/images
+~/Desktop/housekeeping_bee/files/uploads
+~/Desktop/housekeeping_bee/update
+ 
+====================================================================================================================================
+[5] Create housekeeper.yaml in housekeeping_bee/db
+====================================================================================================================================
+cd ~/Desktop/housekeeping_bee/db
+sudo nano housekeeper.yaml 
+
+====
+paste the code to file and then save:
+====
+version: '2'
+
+services:
+  postgres_container:
+    image: bitnami/postgresql:16.4.0-debian-12-r12
+    restart: always
+    ports:
+      - 5432:5432
+    networks:
+      - housekeeper-network
+    environment:
+      - POSTGRES_PASSWORD=${PG_HOUSEKEEPER_PWD}
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=housekeeper2024v1
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+
+volumes:
+  pg_data: {}
+
+networks:
+  housekeeper-network:
+    external: false
+    name: housekeeper-network
+    
+====================================================================================================================================
+[6] install postgresql docker image
+====================================================================================================================================
+    docker pull bitnami/postgresql:16.4.0-debian-12-r12    
+====================================================================================================================================
+[7] create docker container
+====================================================================================================================================
+    cd ~/Desktop/housekeeping_bee/db
+    export PG_HOUSEKEEPER_PWD="abcd2468"
+    docker compose -f housekeeper.yaml up -d
+====================================================================================================================================
+[8] test connection
+====================================================================================================================================
+    docker start db-postgres_container-1
+    docker exec -u 0 -it db-postgres_container-1 bash
+====================================================================================================================================
+[9] create database schema 
+====================================================================================================================================
+
+    psql postgres postgres
+    \connect housekeeper2024v1;
+    CREATE SCHEMA housekeeper_app;
+    SET schema 'housekeeper_app';
+    SET search_path TO housekeeper_app;
+    SELECT * FROM pg_tables;
+    \dt;
+
+====================================================================================================================================
+[10] Add user to role
+====================================================================================================================================
+
+ALTER USER postgres SET search_path TO 'housekeeper_app';
+
+====================================================================================================================================
+[11] exit from docker and return to shell
+====================================================================================================================================
+
+exit
+exit
+
+====================================================================================================================================
+[12] restore the latest version of db dump to schema
+====================================================================================================================================
+
+cd ~/Desktop/HousekeeperBackup_initial_db
+docker container ls
+export CONTAINER_ID={container id}
+export DB_NAME=housekeeper2024v1
+export DB_PWD=abcd2468
+export SRC_FOLDER=~/Desktop/HousekeeperBackup_initial_db
+docker exec -e PGPASSWORD=$DB_PWD -i $CONTAINER_ID psql -U postgres -d $DB_NAME < $SRC_FOLDER/postgres-backup.sql
+
+====================================================================================================================================
+[13] install java 17 runtime and jdk
+====================================================================================================================================
+
+	sudo apt install openjdk-17-jre -y
+	sudo apt install openjdk-17-jdk -y
+	    
+========================================================================================================================================	
+[14] chmod of .sh files to executable
+========================================================================================================================================
+
+cd /home/thomas/Desktop/housekeeping_bee/backup/
+chmod +x *.sh
+
+cd ~/Desktop/housekeeping_bee/update
+chmod +x *.sh
+
+cd ~/Desktop/housekeeping_bee/files/prog
+chmod +x run3.s
+
+cd ~/Desktop/housekeeping_bee/files/prog/admin
+chmod +x run3.sh 
+
+cd ~/Desktop/housekeeping_bee/files/prog/admin/scheduler
+chmod +x *.sh
+
+========================================================================================================================================	
+[15] update filewall rules to allow 8080 and 8088
+========================================================================================================================================
+
+sudo ufw allow 8080
+sudo ufw allow 8088
+sudo ufw reload
+
+========================================================================================================================================	
+[16] Create Auto run after login 
+========================================================================================================================================
+
+1. command key + A
+2. search "startup application"
+
+3. Create backend 
+
+	Name: 		housekeeper bee backend server
+	command:	gnome-terminal -- bash -c "/home/thomas/Desktop/housekeeping_bee/files/prog/run3.sh; exec bash"
+
+4. Create Administration server
+
+	Name: 		housekeeper bee admin server
+	command:	gnome-terminal -- bash -c "/home/thomas/Desktop/housekeeping_bee/files/prog/admin/run3.sh; exec bash"
+
+========================================================================================================================================	
+[17] Add RTC battery  
+	
+	https://www.cytron.io/tutorial/rtc-raspberry-pi-5?srsltid=AfmBOooqgeD0vQygA90WyyaXh6SYADMxyp8xRqf2JfFeZxJeGn5wxezQ
+	
+========================================================================================================================================
+1. sudo apt install i2c-tools -y
+2. sudo apt install raspi-config -y
+
+3. sudo raspi-config
+	Go to "Interface Option" >> select "I2C" >> enable I2C
+	
+4. if you are using a recharageable lithium battery
+   
+   sudo nano /boot/firmware/config.txt
+
+	Add the following under [all] section
+	
+	dtparam=rtc=bbat_vchg=3000000
+
+
+5. sudo -E rpi-eeprom-config --edit
+
+	Adding the following two lines.
+	
+		POWER_OFF_ON_HALT=1
+		WAKE_ON_GPIO=0
+
+6. test the functionality with:
+
+	echo +120 | sudo tee /sys/class/rtc/rtc0/wakealarm
+	sudo halt
+
+7. Enable battery charging
+
+	/sys/devices/platform/soc/soc:rpi_rtc/rtc/rtc0/charging_voltage:0
+	/sys/devices/platform/soc/soc:rpi_rtc/rtc/rtc0/charging_voltage_max:4400000
+	/sys/devices/platform/soc/soc:rpi_rtc/rtc/rtc0/charging_voltage_min:1300000
+
+8. If you are using unchargeable lithium cell, you should remove the following from /boot/firmware/config.txt:
+	
+	sudo nano /boot/firmware/config.txt
+	
+	remove the following from the file:
+	
+	dtparam=rtc_bbat_vchg=3000000
+
+========================================================================================================================================
+[18] install temperature sensors app
+========================================================================================================================================
+
+sudo apt install lm-sensors -y
+sudo apt install psensor -y
+
+========================================================================================================================================
+[19] update container id of the backup and restore scripts
+========================================================================================================================================
+
+1. docker container ls
+2. copy the container id
+3. cd ~/Desktop/housekeeping_bee/backup
+4. sudo nano backup.sh
+5. update the container id and then save and exit
+6. sudo nano restore.sh 
+7. update the container id and then save and exit
+
+========================================================================================================================================
+[20] reboot
+========================================================================================================================================
+
+sudo reboot
+
+========================================================================================================================================
+[21] Test the result
+========================================================================================================================================
+
+1. open a web browser 
+2. launch the home asset management web application (on Raspberry pi input "localhost:8080" or remote machine input "{raspberry pi ip}:8080"
+3. login is "admin" (No double quote)
+4. password is "abc123" (No double quote)
+
+or
+
+Using the iOS App update the service ip and then log in the web application. [The app is waiting for Apple approval]
+
+========================================================================================================================================
+FINISH
+========================================================================================================================================
