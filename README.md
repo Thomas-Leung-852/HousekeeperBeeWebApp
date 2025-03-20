@@ -22,6 +22,7 @@ Part C - How to use shell scripts to install Housekeeper Bee Backend (Household 
 <a href="https://youtu.be/Q1--e4d7-3I?si=4XWzjJw5SWibU1I" target="_blank">https://youtu.be/Q1--e4d7-3I?si=4XWzjJw5SWibU1I</a>  
 
 
+***Optional***   
 Part D - Integrate backend with iPhone APP (Housekeeper Bee Mobile)       
 <a href="https://youtu.be/Hd59EvuuvnE?si=aSDc4aFpYkUrz_U9" target="_blank">https://youtu.be/Hd59EvuuvnE?si=aSDc4aFpYkUrz_U9</a> 
 
