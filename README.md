@@ -6,10 +6,10 @@ https://vneticworkshop.wixsite.com/thomasleungportfolio/copy-of-projects
 
 ## Description  
 
-Household Items Management Web App binary and setup scripts
+This page provides Household Items Management Web App binary and setup scripts.
 
 We are thrilled to present our cutting-edge web-based application designed to simplify storage management for families and individuals. In an era where urban living spaces are becoming increasingly compact, our app meets the growing demand for effective organization and efficient tracking of storage resources. It is 100% available for Desktop browsers. 
-Housekeeper Bee Mobile​​ App designed to integrate seamlessly with our Household Items management web-based application running on your on-premise Raspberry Pi 5 (4GB recommended) server. Household Items Management: Keep track of assets stored in storage boxes across various locations, ensuring you know exactly where everything is.
+Housekeeper Bee Mobile​​ App designed to integrate seamlessly with our Household Items management web-based application running on your on-premise Raspberry Pi 5 (2GB) server. Household Items Management: Keep track of assets stored in storage boxes across various locations, ensuring you know exactly where everything is.
 
 Key Features of this app extends the functionality of web-based application :
 
