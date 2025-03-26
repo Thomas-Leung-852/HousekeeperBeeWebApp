@@ -1,8 +1,27 @@
 # HousekeeperBeeWebApp
 
+## Project Background
+
+https://vneticworkshop.wixsite.com/thomasleungportfolio/copy-of-projects
+
 ## Description  
+
 Household Items Management Web App binary and setup scripts
 
+We are thrilled to present our cutting-edge web-based application designed to simplify storage management for families and individuals. In an era where urban living spaces are becoming increasingly compact, our app meets the growing demand for effective organization and efficient tracking of storage resources. It is 100% available for Desktop browsers. 
+Housekeeper Bee Mobile​​ App designed to integrate seamlessly with our Household Items management web-based application running on your on-premise Raspberry Pi 5 (4GB recommended) server. Household Items Management: Keep track of assets stored in storage boxes across various locations, ensuring you know exactly where everything is.
+
+Key Features of this app extends the functionality of web-based application :
+
+1. Photo Capture: Take and share photos directly within the app for quick documentation.
+
+2. Face ID Login: Enjoy secure access through Face ID, ensuring your data is protected.
+
+3. NFC Tag Reading: Quickly read NFC tags to streamline inventory management and product identification.
+
+4. EAN-13 Barcode Scanning: Effortlessly scan EAN-13 barcodes, enhancing accuracy in tracking household Items and fetch product profile from barcode database.
+
+5. iBeacon Location Services: Easily locate iBeacons to finding the missing storage boxes.
 
 ## Download ZIP files
 
