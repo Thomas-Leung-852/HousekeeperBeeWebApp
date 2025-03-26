@@ -4,6 +4,8 @@
 
 https://vneticworkshop.wixsite.com/thomasleungportfolio/copy-of-projects
 
+<img src="https://static.wixstatic.com/media/0d7edc_317a530add0e4077b6f649a99cfcd504~mv2.png/v1/fill/w_600,h_169,al_c,q_85,enc_avif,quality_auto/0d7edc_317a530add0e4077b6f649a99cfcd504~mv2.png">    
+
 ## Description  
 
 This page provides Household Items Management Web App binary and setup scripts.
