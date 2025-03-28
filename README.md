@@ -42,10 +42,9 @@ Part B - Setup Ubuntu
 Part C - How to use shell scripts to install Housekeeper Bee Backend (Household Items Management Server) 
 <a href="https://youtu.be/Q1--e4d7-3I?si=4XWzjJw5SWibU1I" target="_blank">https://youtu.be/Q1--e4d7-3I?si=4XWzjJw5SWibU1I</a>  
 
-![](https://static.wixstatic.com/media/0d7edc_e5ac0b61c02741b99430796aeff0b919~mv2.png/v1/fill/w_653,h_413,al_c,lg_1,q_85,enc_avif,quality_auto/0d7edc_e5ac0b61c02741b99430796aeff0b919~mv2.png)   
-![](https://static.wixstatic.com/media/0d7edc_3ad019a9f7a042198a160897427ba16f~mv2.png/v1/fill/w_387,h_334,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/0d7edc_3ad019a9f7a042198a160897427ba16f~mv2.png)   
-![](https://static.wixstatic.com/media/0d7edc_9e6c673d4e0246b5ace64edde3d087b1~mv2.png/v1/fill/w_457,h_366,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/0d7edc_9e6c673d4e0246b5ace64edde3d087b1~mv2.png)   
-
+<img src="https://static.wixstatic.com/media/0d7edc_e5ac0b61c02741b99430796aeff0b919~mv2.png/v1/fill/w_653,h_413,al_c,lg_1,q_85,enc_avif,quality_auto/0d7edc_e5ac0b61c02741b99430796aeff0b919~mv2.png" width="400px">    
+<img src="https://static.wixstatic.com/media/0d7edc_3ad019a9f7a042198a160897427ba16f~mv2.png/v1/fill/w_387,h_334,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/0d7edc_3ad019a9f7a042198a160897427ba16f~mv2.png" width="400px">    
+<img src="https://static.wixstatic.com/media/0d7edc_9e6c673d4e0246b5ace64edde3d087b1~mv2.png/v1/fill/w_457,h_366,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/0d7edc_9e6c673d4e0246b5ace64edde3d087b1~mv2.png" width="400px">    
 
 ***Optional***   
 Part D - Integrate backend with iPhone APP (Housekeeper Bee Mobile)       
