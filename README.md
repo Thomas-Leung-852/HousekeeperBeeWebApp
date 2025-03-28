@@ -47,5 +47,7 @@ Part C - How to use shell scripts to install Housekeeper Bee Backend (Household 
 Part D - Integrate backend with iPhone APP (Housekeeper Bee Mobile)       
 <a href="https://youtu.be/Hd59EvuuvnE?si=aSDc4aFpYkUrz_U9" target="_blank">https://youtu.be/Hd59EvuuvnE?si=aSDc4aFpYkUrz_U9</a> 
 
-![](https://static.wixstatic.com/media/0d7edc_1bcb878f532a46ac85d3a9d6749238a7~mv2.png/v1/fill/w_119,h_115,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/0d7edc_1bcb878f532a46ac85d3a9d6749238a7~mv2.png) https://apps.apple.com/tw/app/housekeeper-bee/id6742815735  
+![](https://static.wixstatic.com/media/0d7edc_1bcb878f532a46ac85d3a9d6749238a7~mv2.png/v1/fill/w_119,h_115,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/0d7edc_1bcb878f532a46ac85d3a9d6749238a7~mv2.png) ![](https://static.wixstatic.com/media/0d7edc_676bcb046f9347289b048dc66848717b~mv2.png/v1/fill/w_113,h_115,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/0d7edc_676bcb046f9347289b048dc66848717b~mv2.png)
+https://apps.apple.com/tw/app/housekeeper-bee/id6742815735  
 
+![](https://static.wixstatic.com/media/0d7edc_8574d21bf1264dc191d369d71a71f439~mv2.png/v1/fill/w_158,h_342,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/license%20key.png) ![](https://static.wixstatic.com/media/0d7edc_afa9dfe0e9bd4fe7990045a2d60514cc~mv2.png/v1/fill/w_158,h_342,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Color_Theme.png) ![](https://static.wixstatic.com/media/0d7edc_2bf769122808442d8220ed7b6d4526d0~mv2.png/v1/fill/w_158,h_342,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/scan%20barcode.png) ![](https://static.wixstatic.com/media/0d7edc_b1d684095bfb42a4bf4b0adc2825c48f~mv2.png/v1/fill/w_158,h_342,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/searching.png)
