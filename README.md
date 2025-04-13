@@ -40,7 +40,7 @@ Part B - Setup Ubuntu
 
 
 Part C - How to use shell scripts to install Housekeeper Bee Backend (Household Items Management Server) 
-<a href="https://youtu.be/jV7THlA_enc?si=0qWgMwSyNVUlHlDi" target="_blank">https://youtu.be/jV7THlA_enc?si=0qWgMwSyNVUlHlDi</a>  
+<a href="https://youtu.be/D7ZOcX-viFg?si=SHwjjFFe7CXiHBII" target="_blank">https://youtu.be/D7ZOcX-viFg?si=SHwjjFFe7CXiHBII</a>  
 
 <img src="https://static.wixstatic.com/media/0d7edc_e5ac0b61c02741b99430796aeff0b919~mv2.png/v1/fill/w_653,h_413,al_c,lg_1,q_85,enc_avif,quality_auto/0d7edc_e5ac0b61c02741b99430796aeff0b919~mv2.png" width="400px">    
 <img src="https://static.wixstatic.com/media/0d7edc_3ad019a9f7a042198a160897427ba16f~mv2.png/v1/fill/w_387,h_334,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/0d7edc_3ad019a9f7a042198a160897427ba16f~mv2.png" width="400px">    
