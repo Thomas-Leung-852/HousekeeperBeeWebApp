@@ -11,7 +11,7 @@ found(){
 
 #Do update
 sleep 1
-pwd="abc123"
+pwd="$HOUSEKEEPER_BEE_PWD_SUDO"
 fdest=~/Desktop/housekeeping_bee/files/prog
 fname=$(lsblk | grep -i "sda1" | awk '{print $7}')
 

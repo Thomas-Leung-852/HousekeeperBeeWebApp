@@ -1,4 +1,5 @@
 #!/bin/bash
-chmod +x *.sh
-sudo apt update && sudo apt upgrade -y
-sudo apt install net-tools
+sudo apt install pi-bluetooth
+systemctl restart bluetooth
+sudo apt install xterm -y
+resize -s 30 180

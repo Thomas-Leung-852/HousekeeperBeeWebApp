@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ ! -d "~/.config/autostart" ]; then 
+if [ ! -d ~/.config/autostart ]; then 
 sudo mkdir ~/.config/autostart
 fi
 
@@ -9,7 +9,7 @@ sudo touch ~/.config/autostart/lauch_java_prog_2.desktop
 
 echo "[Desktop Entry]
 Type=Application
-Exec=gnome-terminal -- bash -c \"/home/thomas/Desktop/housekeeping_bee/files/prog/admin/run3.sh; exec bash\"
+Exec=gnome-terminal -- bash -c \"~/Desktop/housekeeping_bee/files/prog/admin/run3.sh; exec bash\"
 Hidden=false
 NoDisplay=false
 X-GNOME-Autostart-enabled=true
@@ -21,7 +21,7 @@ Comment=
 
 echo "[Desktop Entry]
 Type=Application
-Exec=gnome-terminal -- bash -c \"/home/thomas/Desktop/housekeeping_bee/files/prog/run3.sh; exec bash\"
+Exec=gnome-terminal -- bash -c \"~/Desktop/housekeeping_bee/files/prog/run3.sh; exec bash\"
 Hidden=false
 NoDisplay=false
 X-GNOME-Autostart-enabled=true

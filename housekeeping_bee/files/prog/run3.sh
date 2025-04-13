@@ -1,7 +1,7 @@
 export housekeeper_bee_sys_img=~/Desktop/housekeeping_bee/files/sys/images/
 export housekeeper_bee_upload_path=~/Desktop/housekeeping_bee/files/uploads/
 export housekeeper_bee_backup_restore=~/Desktop/housekeeping_bee/backup/
-export db_pwd=abcd2468
+export db_pwd=$HOUSEKEEPER_BEE_PWD_DB
 export deploy_env=dev
 export domain_name=192.168.50.187:8080
 export email_user_id_dev=id

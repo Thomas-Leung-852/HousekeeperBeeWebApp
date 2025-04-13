@@ -2,12 +2,12 @@
 
 CONTAINER_NAME=db-postgres_container-1
 DB_NAME=housekeeper2024v1
-DB_PWD=abcd2468
+DB_PWD=$HOUSEKEEPER_BEE_PWD_DB
 FAMILY_ID=$1
 FOLDER_NAME='HousekeeperBackup'_$(date '+%Y%m%d%H%M%S')
 DEST_FOLDER=~/Desktop/housekeeping_bee/backup
 IMG_FOLDER=~/Desktop/housekeeping_bee/files/uploads
-PWD=abc123
+PWD=$HOUSEKEEPER_BEE_PWD_SUDO
 
 if [ ! -d "$FAMILY_ID" ]; then
   mkdir $DEST_FOLDER/$FAMILY_ID

@@ -1,5 +1,5 @@
 #! /usr/bin/bash
-cd /home/thomas/Desktop/housekeeping_bee/backup/
+cd ~/Desktop/housekeeping_bee/backup/
 chmod +x *.sh
 cd ~/Desktop/housekeeping_bee/update
 chmod +x *.sh
