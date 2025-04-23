@@ -42,8 +42,8 @@ Part B - Setup Ubuntu
 Part C - How to use shell scripts to install Housekeeper Bee Backend (Household Items Management Server) 
 <a href="https://youtu.be/D7ZOcX-viFg?si=SHwjjFFe7CXiHBII" target="_blank">https://youtu.be/D7ZOcX-viFg?si=SHwjjFFe7CXiHBII</a>  
 
-<img src="https://static.wixstatic.com/media/0d7edc_e5ac0b61c02741b99430796aeff0b919~mv2.png/v1/fill/w_653,h_413,al_c,lg_1,q_85,enc_avif,quality_auto/0d7edc_e5ac0b61c02741b99430796aeff0b919~mv2.png" width="400px">    
-<img src="https://static.wixstatic.com/media/0d7edc_3ad019a9f7a042198a160897427ba16f~mv2.png/v1/fill/w_387,h_334,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/0d7edc_3ad019a9f7a042198a160897427ba16f~mv2.png" width="400px">    
+<img src="https://static.wixstatic.com/media/0d7edc_b360bcdc06ff40cd85dec66167ef788d~mv2.png/v1/fill/w_653,h_403,al_c,lg_1,q_85,enc_avif,quality_auto/0d7edc_b360bcdc06ff40cd85dec66167ef788d~mv2.png" width="400px">    
+<img src="https://static.wixstatic.com/media/0d7edc_612de77aaa774881910fd2b0a3c20bae~mv2.png/v1/fill/w_653,h_410,al_c,lg_1,q_85,enc_avif,quality_auto/0d7edc_612de77aaa774881910fd2b0a3c20bae~mv2.png" width="400px">    
 <img src="https://static.wixstatic.com/media/0d7edc_9e6c673d4e0246b5ace64edde3d087b1~mv2.png/v1/fill/w_457,h_366,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/0d7edc_9e6c673d4e0246b5ace64edde3d087b1~mv2.png" width="400px">    
 
 ***Optional***   
@@ -55,11 +55,11 @@ https://apps.apple.com/us/app/housekeeper-bee/id6742815735
 <img src="https://static.wixstatic.com/media/0d7edc_ecf143e7d8f8476897d9164a0c8ad031~mv2.png/v1/fill/w_290,h_567,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_8110.png" width="200px">
 <img src="https://static.wixstatic.com/media/0d7edc_d109f814d31642858b6d36055de64948~mv2.png/v1/fill/w_308,h_567,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_8111.png" width="200px">
 <img src="https://static.wixstatic.com/media/0d7edc_2bf769122808442d8220ed7b6d4526d0~mv2.png/v1/fill/w_264,h_567,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/scan%20barcode.png" width="200px">
-<img src="https://static.wixstatic.com/media/0d7edc_b1d684095bfb42a4bf4b0adc2825c48f~mv2.png/v1/fill/w_308,h_626,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/searching.png" width="200px">
-<img src="https://static.wixstatic.com/media/0d7edc_506587880bc64c20b8d9c53e28243785~mv2.png/v1/fill/w_158,h_342,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_8113.png" width="200px">    
-
-![](https://static.wixstatic.com/media/0d7edc_e91d8b3efa1e4d178d25dfbf53111b8b~mv2.png/v1/fill/w_158,h_342,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7797.png)
+<img src="https://static.wixstatic.com/media/0d7edc_b1d684095bfb42a4bf4b0adc2825c48f~mv2.png/v1/fill/w_308,h_626,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/searching.png" width="200px">    
+<img src="https://static.wixstatic.com/media/0d7edc_506587880bc64c20b8d9c53e28243785~mv2.png/v1/fill/w_158,h_342,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_8113.png" width="200px">
+<img src="https://static.wixstatic.com/media/0d7edc_e91d8b3efa1e4d178d25dfbf53111b8b~mv2.png/v1/fill/w_158,h_342,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7797.png" width="200px">
 <img src="https://static.wixstatic.com/media/0d7edc_d3b534eeb1084171b349edc7c4a333dd~mv2.png/v1/fill/w_289,h_626,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/detail.png" width="200px">   
+
 ![](https://static.wixstatic.com/media/0d7edc_f0531522998c4ed08d8d7cdd991a2968~mv2.jpeg/v1/crop/x_0,y_43,w_2016,h_1403/fill/w_707,h_490,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7445.jpeg)      
 
 <a href="https://www.youtube.com/watch?v=nN9iC1CJG3g" target="_blank">Housekeeper Bee Mobile App Demo</a>    
