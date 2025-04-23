@@ -10,4 +10,5 @@ export email_api_key_prod=xxx
 export sender_email_address=support@a.com
 export server_location=onsite
 export license_key=~/Desktop/housekeeping_bee/files/prog/license.yaml
-java -jar ~/Desktop/housekeeping_bee/files/prog/housekeeper-0.0.1-SNAPSHOT.jar
+cd ~/Desktop/housekeeping_bee/files/prog
+java -jar housekeeper-0.0.1-SNAPSHOT.jar --spring.config.location=application.properties
