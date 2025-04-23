@@ -58,7 +58,8 @@ https://apps.apple.com/us/app/housekeeper-bee/id6742815735
 <img src="https://static.wixstatic.com/media/0d7edc_b1d684095bfb42a4bf4b0adc2825c48f~mv2.png/v1/fill/w_308,h_626,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/searching.png" width="200px">    
 <img src="https://static.wixstatic.com/media/0d7edc_506587880bc64c20b8d9c53e28243785~mv2.png/v1/fill/w_158,h_342,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_8113.png" width="200px">
 <img src="https://static.wixstatic.com/media/0d7edc_e91d8b3efa1e4d178d25dfbf53111b8b~mv2.png/v1/fill/w_158,h_342,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7797.png" width="200px">
-<img src="https://static.wixstatic.com/media/0d7edc_d3b534eeb1084171b349edc7c4a333dd~mv2.png/v1/fill/w_289,h_626,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/detail.png" width="200px">   
+<img src="https://static.wixstatic.com/media/0d7edc_e91d8b3efa1e4d178d25dfbf53111b8b~mv2.png/v1/fill/w_158,h_342,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7797.png" width="200px">
+<img src="https://static.wixstatic.com/media/0d7edc_c86a5603a86b436484c449618bfa98fe~mv2.jpeg/v1/fill/w_274,h_626,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/boxes.jpeg" width="200px">   
 
 ![](https://static.wixstatic.com/media/0d7edc_f0531522998c4ed08d8d7cdd991a2968~mv2.jpeg/v1/crop/x_0,y_43,w_2016,h_1403/fill/w_707,h_490,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7445.jpeg)      
 
