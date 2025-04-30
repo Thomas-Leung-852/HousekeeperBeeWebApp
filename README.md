@@ -65,5 +65,8 @@ https://apps.apple.com/us/app/housekeeper-bee/id6742815735
 
 <a href="https://www.youtube.com/watch?v=nN9iC1CJG3g" target="_blank">Housekeeper Bee Mobile App Demo</a>    
 
-[![](https://markdown-videos-api.jorgenkh.no/youtube/nN9iC1CJG3g)](https://youtu.be/nN9iC1CJG3g)  
+[![](https://markdown-videos-api.jorgenkh.no/youtube/nN9iC1CJG3g)](https://youtu.be/nN9iC1CJG3g)    
+
+## Wiki
+![Wiki](https://github.com/Thomas-Leung-852/HousekeeperBeeWebApp/wiki)  
 
