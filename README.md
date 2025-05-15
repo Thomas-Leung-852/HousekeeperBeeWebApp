@@ -25,33 +25,39 @@ Key Features of this app extends the functionality of web-based application :
 
 5. iBeacon Location Services: Easily locate iBeacons to finding the missing storage boxes.
 
-## Download ZIP files
+## Download a ZIP file
 
 https://github.com/Thomas-Leung-852/HousekeeperBeeWebApp/archive/refs/heads/main.zip
 
 
-## Videos - Installation 
+## Videos
 
-Part A - Install Raspberry Pi OS (Ubuntu 24.04 LTS)  
+**Part A** - Install Raspberry Pi OS (Ubuntu 24.04 LTS)  
 <a href="https://youtu.be/p9k2Mc3MpTE?si=8Wu3y2Xy_TV1Z2vv" target="_blank">https://youtu.be/p9k2Mc3MpTE?si=8Wu3y2Xy_TV1Z2vv</a>
 
-Part B - Setup Ubuntu   
+**Part B** - Setup Ubuntu   
 <a href="https://youtu.be/0s-VTIfdZuI?si=qQCB3shDIud8lznI" target="_blank">https://youtu.be/0s-VTIfdZuI?si=qQCB3shDIud8lznI</a>
 
+      
+<img src="https://static.wixstatic.com/media/0d7edc_17d7c6d5f181431dba2d0b371939355a~mv2.png/v1/fill/w_149,h_144,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/0d7edc_17d7c6d5f181431dba2d0b371939355a~mv2.png" width="100px">    
 
-Part C - How to use shell scripts to install Housekeeper Bee Backend (Household Items Management Server) 
-<a href="https://youtu.be/D7ZOcX-viFg?si=SHwjjFFe7CXiHBII" target="_blank">https://youtu.be/D7ZOcX-viFg?si=SHwjjFFe7CXiHBII</a> <img src="https://static.wixstatic.com/media/0d7edc_17d7c6d5f181431dba2d0b371939355a~mv2.png/v1/fill/w_149,h_144,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/0d7edc_17d7c6d5f181431dba2d0b371939355a~mv2.png" width="100px">      
+**Part C** - How to use shell scripts to setup the Housekeeper Bee Backend (Household Items Management Server)    
+
+[ Method 1 ] One command setup - 
+<a href="https://youtu.be/D7ZOcX-viFg?si=SHwjjFFe7CXiHBII" target="_blank">https://youtu.be/D7ZOcX-viFg?si=SHwjjFFe7CXiHBII</a>     
+[ Method 2 ] For advanced users - https://youtu.be/Q1--e4d7-3I?si=mauKBkNFu-rs_9SU
 
 <img src="https://static.wixstatic.com/media/0d7edc_b360bcdc06ff40cd85dec66167ef788d~mv2.png/v1/fill/w_653,h_403,al_c,lg_1,q_85,enc_avif,quality_auto/0d7edc_b360bcdc06ff40cd85dec66167ef788d~mv2.png" width="400px">    
 <img src="https://static.wixstatic.com/media/0d7edc_612de77aaa774881910fd2b0a3c20bae~mv2.png/v1/fill/w_653,h_410,al_c,lg_1,q_85,enc_avif,quality_auto/0d7edc_612de77aaa774881910fd2b0a3c20bae~mv2.png" width="400px">    
 <img src="https://static.wixstatic.com/media/0d7edc_9e6c673d4e0246b5ace64edde3d087b1~mv2.png/v1/fill/w_457,h_366,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/0d7edc_9e6c673d4e0246b5ace64edde3d087b1~mv2.png" width="400px">    
 
 ***Optional***   
-Part D - Integrate backend with iPhone APP (Housekeeper Bee Mobile)       
+**Part D** - Integrate backend with iPhone APP (Housekeeper Bee Mobile)       
 <a href="https://youtu.be/Hd59EvuuvnE?si=aSDc4aFpYkUrz_U9" target="_blank">https://youtu.be/Hd59EvuuvnE?si=aSDc4aFpYkUrz_U9</a> 
 
-![](https://static.wixstatic.com/media/0d7edc_1bcb878f532a46ac85d3a9d6749238a7~mv2.png/v1/fill/w_119,h_115,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/0d7edc_1bcb878f532a46ac85d3a9d6749238a7~mv2.png) ![](https://static.wixstatic.com/media/0d7edc_676bcb046f9347289b048dc66848717b~mv2.png/v1/fill/w_113,h_115,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/0d7edc_676bcb046f9347289b048dc66848717b~mv2.png)
-https://apps.apple.com/us/app/housekeeper-bee/id6742815735  
+![](https://static.wixstatic.com/media/0d7edc_1bcb878f532a46ac85d3a9d6749238a7~mv2.png/v1/fill/w_119,h_115,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/0d7edc_1bcb878f532a46ac85d3a9d6749238a7~mv2.png) ![](https://static.wixstatic.com/media/0d7edc_676bcb046f9347289b048dc66848717b~mv2.png/v1/fill/w_113,h_115,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/0d7edc_676bcb046f9347289b048dc66848717b~mv2.png)   
+Download APP from Apple App Store: https://apps.apple.com/us/app/housekeeper-bee/id6742815735       
+
 <img src="https://static.wixstatic.com/media/0d7edc_ecf143e7d8f8476897d9164a0c8ad031~mv2.png/v1/fill/w_290,h_567,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_8110.png" width="200px">
 <img src="https://static.wixstatic.com/media/0d7edc_d109f814d31642858b6d36055de64948~mv2.png/v1/fill/w_308,h_567,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_8111.png" width="200px">
 <img src="https://static.wixstatic.com/media/0d7edc_2bf769122808442d8220ed7b6d4526d0~mv2.png/v1/fill/w_264,h_567,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/scan%20barcode.png" width="200px">
