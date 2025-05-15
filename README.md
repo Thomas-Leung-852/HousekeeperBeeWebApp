@@ -58,6 +58,13 @@ https://github.com/Thomas-Leung-852/HousekeeperBeeWebApp/archive/refs/heads/main
 ![](https://static.wixstatic.com/media/0d7edc_1bcb878f532a46ac85d3a9d6749238a7~mv2.png/v1/fill/w_119,h_115,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/0d7edc_1bcb878f532a46ac85d3a9d6749238a7~mv2.png) ![](https://static.wixstatic.com/media/0d7edc_676bcb046f9347289b048dc66848717b~mv2.png/v1/fill/w_113,h_115,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/0d7edc_676bcb046f9347289b048dc66848717b~mv2.png)   
 Download APP from Apple App Store: https://apps.apple.com/us/app/housekeeper-bee/id6742815735       
 
+An app as a way to give people a much easier and efficient way to label and track their boxes without them having to write and rewrite everything on the side of their box.
+The way it works is you put a barcode label sticker on your box, scan it with the app, and then type in everything that you're putting inside.
+ That way, the next time you want to know what's inside the box, instead of having to rely on scrawled text on the outside, you can just scan the label, 
+ and it'll tell you everything that you put inside. In addition, if you are looking for an item, but not sure where it is, you can use the search bar to find out exactly what box to look for, 
+ and where that box is located/supposed to be located. The intent of this app is to make it a lot easier to organize when you have large amounts of boxes and items to keep track of, 
+ and also to make it easier to find items within those containers.
+
 <img src="https://static.wixstatic.com/media/0d7edc_ecf143e7d8f8476897d9164a0c8ad031~mv2.png/v1/fill/w_290,h_567,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_8110.png" width="200px">
 <img src="https://static.wixstatic.com/media/0d7edc_d109f814d31642858b6d36055de64948~mv2.png/v1/fill/w_308,h_567,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_8111.png" width="200px">
 <img src="https://static.wixstatic.com/media/0d7edc_2bf769122808442d8220ed7b6d4526d0~mv2.png/v1/fill/w_264,h_567,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/scan%20barcode.png" width="200px">
