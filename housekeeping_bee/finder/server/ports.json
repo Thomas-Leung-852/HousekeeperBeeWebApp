@@ -1,0 +1,6 @@
+{
+    "webapp_http_port": 8080,
+    "webapp_https_port": 8443,
+    "admin_http_port": 8088,
+    "admin_https_port": 7777 
+}

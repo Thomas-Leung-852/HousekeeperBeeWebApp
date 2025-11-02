@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; "> -->
+    <title>Housekeeper Bee Finder</title>
+    <link rel="stylesheet" href="public/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <img src="public/images/box_64x64.png" class="float-bounce" ><h1>Find My Bee</h1>
+            <p class="subtitle">Discover Housekeeper Bee on your local network</p>
+            <div class="platform-info" id="platformInfo">
+                <span id="platformBadge">Loading...</span>
+            </div>
+        </div>
+
+        <!-- Status Bar -->
+        <div class="status-bar">
+            <div class="status-content">
+                <span class="status-icon" id="statusIcon">🔍</span>
+                <span class="status-text" id="statusText">Ready to discover devices...</span>
+            </div>
+            <div class="progress-container" id="progressContainer">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+        </div>
+
+        <!-- Network Interface Info -->
+        <div class="info-panel" id="networkPanel">
+            <h3>🌐 Network Interfaces</h3>
+            <div id="networkInterfaces" class="network-list">
+                <p class="loading">Loading network information...</p>
+            </div>
+        </div>
+
+        <!-- Discovered Devices -->
+        <div class="devices-panel">
+            <h3>📱 Discovered Housekeeper Bee devices (<span id="deviceCount">0</span>)</h3>
+            <div class="devices-grid" id="devicesGrid">
+                <div class="empty-state">
+                    <div class="empty-icon">🔍</div>
+                    <p>No devices found yet</p>
+                    <p class="empty-hint">Click "Start Discovery" to scan for devices</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="actions-panel">
+            <button class="btn btn-primary" id="btnRetry">
+                <span class="btn-icon">🔄</span>
+                <span class="btn-text">Start Discovery</span>
+            </button>
+            <button class="btn btn-danger" id="btnAbort" disabled>
+                <span class="btn-icon">⏹</span>
+                <span class="btn-text">Abort</span>
+            </button>
+            <button class="btn btn-secondary" id="btnExit">
+                <span class="btn-icon">❌</span>
+                <span class="btn-text">Exit</span>
+            </button>
+        </div>
+
+        <!-- Activity Log -->
+        <div class="log-panel">
+            <div class="log-header">
+                <h3>📝 Activity Log</h3>
+                <button class="btn-clear" id="btnClearLog">Clear</button>
+            </div>
+            <div class="log-content" id="logContent">
+                <p class="log-entry">Ready to start discovery...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>

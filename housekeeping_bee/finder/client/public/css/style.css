@@ -1,0 +1,552 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+    background: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    overflow: hidden;
+}
+
+.container {
+    max-width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: white;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(135deg, #2c2d2e 0%, #2c2b2c 100%);
+    color: white;
+    padding: 20px 30px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 14px;
+    opacity: 0.9;
+    margin-bottom: 10px;
+}
+
+.platform-info {
+    margin-top: 10px;
+}
+
+.platform-badge {
+    display: inline-block;
+    padding: 5px 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    font-size: 12px;
+    margin: 0 5px;
+}
+
+/* Status Bar */
+.status-bar {
+    padding: 15px 30px;
+    background: #f8f9fa;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.status-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.status-icon {
+    font-size: 20px;
+}
+
+.status-text {
+    font-size: 16px;
+    font-weight: 600;
+    color: #667eea;
+}
+
+.progress-container {
+    height: 4px;
+    background: #e9ecef;
+    border-radius: 2px;
+    overflow: hidden;
+    display: none;
+}
+
+.progress-container.active {
+    display: block;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    width: 0%;
+    animation: progress 2s ease-in-out infinite;
+}
+
+@keyframes progress {
+    0% {
+        width: 0%;
+    }
+
+    50% {
+        width: 100%;
+    }
+
+    100% {
+        width: 0%;
+    }
+}
+
+/* Info Panel */
+.info-panel {
+    padding: 20px 30px;
+    background: #e3f2fd;
+    border-bottom: 2px solid #90caf9;
+}
+
+.info-panel h3 {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #4f4f50;
+}
+
+.network-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.network-item {
+    padding: 8px 15px;
+    background: white;
+    border-radius: 8px;
+    font-size: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.network-item.vpn {
+    background: #fff3cd;
+    border-left: 3px solid #ffc107;
+}
+
+.network-item strong {
+    color: #667eea;
+    font-family: 'Consolas', monospace;
+}
+
+/* Devices Panel */
+.devices-panel {
+    flex: 1;
+    padding: 20px 30px;
+    overflow-y: auto;
+}
+
+.devices-panel h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+#deviceCount {
+    color: #667eea;
+}
+
+.devices-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+    min-height: 150px;
+}
+
+.empty-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 40px;
+    color: #999;
+}
+
+.empty-icon {
+    font-size: 48px;
+    margin-bottom: 10px;
+    opacity: 0.5;
+}
+
+.empty-hint {
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.device-card {
+    background: white;
+    border: 2px solid #e9ecef;
+    border-radius: 12px;
+    padding: 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.device-card:hover {
+    border-color: #667eea;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+    transform: translateY(-2px);
+}
+
+.device-card.ssl {
+    border-left: 4px solid #4caf50;
+}
+
+.device-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 12px;
+}
+
+.device-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.device-badge {
+    font-size: 20px;
+}
+
+.device-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 13px;
+}
+
+.device-info-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.device-info-label {
+    color: #666;
+}
+
+.device-info-value {
+    font-family: 'Consolas', monospace;
+    color: #667eea;
+    font-weight: 600;
+}
+
+/* Actions Panel */
+.actions-panel {
+    padding: 20px 30px;
+    background: #f8f9fa;
+    border-top: 2px solid #e9ecef;
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    flex: 1;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s;
+    color: white;
+}
+
+.btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #f44336 0%, #d32f2f 100%);
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, #9e9e9e 0%, #757575 100%);
+}
+
+.btn-icon {
+    font-size: 18px;
+}
+
+/* Log Panel */
+.log-panel {
+    padding: 20px 30px;
+    background: #263238;
+    color: #cfd8dc;
+    max-height: 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+.log-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.log-header h3 {
+    font-size: 14px;
+    color: #90caf9;
+}
+
+.btn-clear {
+    padding: 4px 12px;
+    background: #37474f;
+    border: none;
+    border-radius: 4px;
+    color: #cfd8dc;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-clear:hover {
+    background: #455a64;
+}
+
+.log-content {
+    flex: 1;
+    overflow-y: auto;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.log-entry {
+    margin-bottom: 4px;
+    padding: 2px 0;
+}
+
+.log-entry.success {
+    color: #4caf50;
+}
+
+.log-entry.error {
+    color: #f44336;
+}
+
+.log-entry.warning {
+    color: #ffc107;
+}
+
+.loading {
+    color: #999;
+    font-style: italic;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.log-content::-webkit-scrollbar-track {
+    background: #1e272e;
+}
+
+.log-content::-webkit-scrollbar-thumb {
+    background: #455a64;
+}
+
+/* Floating Animation Style 1 - Gentle Float */
+.float-gentle {
+    transition: transform 0.3s ease;
+}
+
+.float-gentle:hover {
+    animation: gentleFloat 2s ease-in-out infinite;
+}
+
+@keyframes gentleFloat {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Floating Animation Style 2 - Bounce Float */
+.float-bounce {
+    transition: transform 0.3s ease;
+}
+
+.float-bounce:hover {
+    animation: bounceFloat 1s ease-in-out infinite;
+}
+
+@keyframes bounceFloat {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    25% {
+        transform: translateY(-15px);
+    }
+
+    50% {
+        transform: translateY(0px);
+    }
+
+    75% {
+        transform: translateY(-8px);
+    }
+}
+
+/* Floating Animation Style 3 - Rotating Float */
+.float-rotate {
+    transition: transform 0.3s ease;
+}
+
+.float-rotate:hover {
+    animation: rotateFloat 3s ease-in-out infinite;
+}
+
+@keyframes rotateFloat {
+
+    0%,
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    25% {
+        transform: translateY(-15px) rotate(5deg);
+    }
+
+    50% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    75% {
+        transform: translateY(-15px) rotate(-5deg);
+    }
+}
+
+/* Floating Animation Style 4 - Wave Float */
+.float-wave {
+    transition: transform 0.3s ease;
+}
+
+.float-wave:hover {
+    animation: waveFloat 2.5s ease-in-out infinite;
+}
+
+@keyframes waveFloat {
+
+    0%,
+    100% {
+        transform: translateY(0px) translateX(0px);
+    }
+
+    25% {
+        transform: translateY(-10px) translateX(10px);
+    }
+
+    50% {
+        transform: translateY(-20px) translateX(0px);
+    }
+
+    75% {
+        transform: translateY(-10px) translateX(-10px);
+    }
+}
+
+/* Floating Animation Style 5 - Scale Float */
+.float-scale {
+    transition: transform 0.3s ease;
+}
+
+.float-scale:hover {
+    animation: scaleFloat 2s ease-in-out infinite;
+}
+
+@keyframes scaleFloat {
+
+    0%,
+    100% {
+        transform: translateY(0px) scale(1);
+    }
+
+    50% {
+        transform: translateY(-20px) scale(1.1);
+    }
+}
+
+/* Floating Animation Style 6 - Swing Float */
+.float-swing {
+    transition: transform 0.3s ease;
+    transform-origin: top center;
+}
+
+.float-swing:hover {
+    animation: swingFloat 2s ease-in-out infinite;
+}
+
+@keyframes swingFloat {
+
+    0%,
+    100% {
+        transform: rotate(0deg) translateY(0px);
+    }
+
+    25% {
+        transform: rotate(10deg) translateY(-10px);
+    }
+
+    50% {
+        transform: rotate(0deg) translateY(-20px);
+    }
+
+    75% {
+        transform: rotate(-10deg) translateY(-10px);
+    }
+}

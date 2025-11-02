@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WiFi Setup - Housekeeper Bee</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="/public/css/styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #667eea;
+            --primary-dark: #5a67d8;
+            --secondary: #764ba2;
+            --success: #10b981;
+            --danger: #ef4444;
+            --warning: #f59e0b;
+            --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --border: #e2e8f0;
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: var(--bg-gradient);
+            min-height: 100vh;
+            padding: 20px;
+            color: var(--text-primary);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .header .bee-icon {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 16px;
+            box-shadow: var(--shadow-lg);
+            overflow: hidden;
+        }
+
+        .tabs {
+            display: flex;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 0;
+            border-bottom: 3px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .tab {
+            flex: 1;
+            padding: 18px 20px;
+            text-align: center;
+            cursor: pointer;
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 600;
+            font-size: 1em;
+            border: none;
+            background: transparent;
+            transition: all 0.3s ease;
+            position: relative;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .tab:hover {
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .tab.active {
+            color: white;
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .tab.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: white;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 40px;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .active-content {
+            display: block;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        h2::before {
+            content: '';
+            width: 5px;
+            height: 28px;
+            background: var(--primary);
+            border-radius: 3px;
+        }
+
+        table {
+            width: 100%;
+            margin: 20px 0;
+            border-collapse: separate;
+            border-spacing: 0 15px;
+        }
+
+        table td {
+            padding: 12px;
+            vertical-align: middle;
+        }
+
+        table td:first-child {
+            font-weight: 600;
+            color: var(--text-primary);
+            width: 200px;
+        }
+
+        input[type="password"],
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid var(--border);
+            border-radius: 10px;
+            font-size: 1em;
+            transition: all 0.3s ease;
+            background: #f8fafc;
+        }
+
+        input:focus,
+        select:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: white;
+            box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+        }
+
+        select {
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23667eea' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            padding-right: 40px;
+        }
+
+        button[type="submit"] {
+            padding: 14px 32px;
+            background: var(--bg-gradient);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-md);
+            margin-top: 20px;
+        }
+
+        button[type="submit"]:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        button[type="submit"]:active {
+            transform: translateY(0);
+        }
+
+        #rst {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+
+        .info-box {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+            border-left: 4px solid var(--primary);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .info-box p {
+            margin: 0;
+            font-size: 1.1em;
+            color: var(--text-primary);
+        }
+
+        .info-box.connected {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(16, 185, 129, 0.05) 100%);
+            border-left-color: var(--success);
+        }
+
+        .info-box.not-connected {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(239, 68, 68, 0.05) 100%);
+            border-left-color: var(--danger);
+        }
+
+        .wifi-icon {
+            font-size: 2em;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        /* Reload Modal */
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            backdrop-filter: blur(5px);
+        }
+
+        #modal {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from { transform: scale(0.9); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        #modal h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        #modal h2::before {
+            display: none;
+        }
+
+        #countdown {
+            font-size: 3em;
+            font-weight: 700;
+            color: var(--primary);
+            margin: 20px 0;
+        }
+
+        /* Progress Bar */
+        #progressBarLayer {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+            backdrop-filter: blur(5px);
+        }
+
+        #progressBar {
+            width: 400px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        #progress {
+            height: 100%;
+            width: 0;
+            background: var(--bg-gradient);
+            transition: width 0.1s ease;
+            border-radius: 20px;
+        }
+
+        /* Error Modal */
+        #errorModal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+            z-index: 1001;
+            backdrop-filter: blur(5px);
+            animation: fadeIn 0.3s ease;
+        }
+
+        #errorModalContent {
+            background: white;
+            padding: 35px 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            animation: bounceIn 0.4s ease;
+            max-width: 450px;
+            width: 90%;
+        }
+
+        @keyframes bounceIn {
+            0% { transform: scale(0.3); opacity: 0; }
+            50% { transform: scale(1.05); }
+            70% { transform: scale(0.9); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .error-icon {
+            font-size: 4em;
+            color: var(--danger);
+            margin-bottom: 15px;
+            animation: shake 0.5s ease;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+            20%, 40%, 60%, 80% { transform: translateX(10px); }
+        }
+
+        #errorModalContent h3 {
+            font-size: 1.5em;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+        }
+
+        #errorModalContent p {
+            font-size: 1.1em;
+            color: var(--text-secondary);
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        #errorModalBtn {
+            padding: 12px 30px;
+            background: var(--danger);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-md);
+        }
+
+        #errorModalBtn:hover {
+            background: #dc2626;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        #errorModalBtn:active {
+            transform: translateY(0);
+        }
+
+        .help-content {
+            line-height: 1.8;
+        }
+
+        .help-content p {
+            margin-bottom: 15px;
+            color: var(--text-secondary);
+        }
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9em;
+        }
+
+        .status-badge.connected {
+            background: var(--success);
+            color: white;
+        }
+
+        .status-badge.disconnected {
+            background: var(--danger);
+            color: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .tab-content {
+                padding: 25px;
+            }
+
+            table td:first-child {
+                width: 120px;
+                font-size: 0.9em;
+            }
+
+            #progressBar {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="bee-icon"><img src="public/images/box_256x256.png" class="float-rotate" ></div>
+            <h1>Housekeeper Bee Server WiFi Setup</h1>
+        </div>
+
+        <div class="card">
+            <!-- Reload Modal -->
+            <div id="overlay">
+                <div id="modal">
+                    <h2 id="msg">Rebooting</h2>
+                    <p id="countdown">5</p>
+                </div>
+            </div>
+
+            <!-- Progress Bar -->
+            <div id="progressBarLayer">
+                <div id="progressBar">
+                    <div id="progress"></div>
+                </div>
+            </div>
+
+            <!-- Error Modal -->
+            <div id="errorModal">
+                <div id="errorModalContent">
+                    <div class="error-icon">⚠️</div>
+                    <h3>Validation Error</h3>
+                    <p id="errorMessage"></p>
+                    <button id="errorModalBtn" onclick="closeErrorModal()">OK, Got It</button>
+                </div>
+            </div>
+
+            <div class="tabs">
+                <div class="tab active" onclick="showTab('home')">
+                    <i class="fas fa-home"></i> HOME
+                </div>
+                <div class="tab" onclick="showTab('edit')">
+                    <i class="fas fa-wifi"></i> SETUP
+                </div>
+                <div class="tab" onclick="showTab('help')">
+                    <i class="fas fa-question-circle"></i> HELP
+                </div>
+            </div>
+
+            <div id="home" class="tab-content active-content">
+                <h2>WiFi Interface Details</h2>
+                <% if (connected_ssid==='' ) { %>
+                    <div class="info-box not-connected">
+                        <p>
+                            <i class="fas fa-wifi wifi-icon" style="color: var(--danger);"></i>
+                            <strong>Status:</strong> Not connected to any WiFi network
+                        </p>
+                    </div>
+                <% } else { %>
+                    <div class="info-box connected">
+                        <p>
+                            <i class="fas fa-wifi wifi-icon" style="color: var(--success);"></i>
+                            <strong>Connected to:</strong> <%= connected_ssid %>
+                        </p>
+                    </div>
+                <% } %>
+            </div>
+
+            <div id="edit" class="tab-content">
+                <h2>WiFi Connection Setup</h2>
+
+                <form id="myForm">
+                    <table>
+                        <% if (connected_ssid==='' ) { %>
+                            <tr>
+                                <td>
+                                    <i class="fas fa-network-wired"></i> Network SSID
+                                </td>
+                                <td>
+                                    <input type="hidden" id="cmd" name="cmd" value="add">
+                                    <select name="ssid" id="ssid">
+                                        <% ssids.forEach(item=> { %>
+                                            <option value="<%= item.ssid %>" <%=item.ssid===connected_ssid ? 'selected' : '' %>>
+                                                <%= item.ssid %> (<%= item.signal %>%)
+                                            </option>
+                                        <% }); %>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <i class="fas fa-lock"></i> WiFi Password
+                                </td>
+                                <td>
+                                    <input type="password" id="password" name="password" placeholder="Enter WiFi password">
+                                </td>
+                            </tr>
+                        <% } else { %>
+                            <tr>
+                                <td colspan="2">
+                                    <input type="hidden" id="cmd" name="cmd" value="del">
+                                    <input type="hidden" id="ssid" name="ssid" value="<%= connected_ssid %>">
+                                    <input type="hidden" id="password" name="password" value="">
+                                    <div class="info-box">
+                                        <p>
+                                            <i class="fas fa-info-circle"></i>
+                                            <strong>Currently connected to:</strong> <%= connected_ssid %>
+                                        </p>
+                                    </div>
+                                </td>
+                            </tr>
+                        <% } %>
+                    </table>
+
+                    <button type="submit">
+                        <i class="fas fa-<%= connected_ssid ? 'times-circle' : 'plug' %>"></i>
+                        <%= connected_ssid ? 'Disconnect from Network' : 'Connect to Network' %>
+                    </button>
+
+                    <div style="margin-top: 20px;">
+                        <strong>Result:</strong> <span id="rst">--:--</span>
+                    </div>
+                </form>
+
+                <script>
+                    // Error Modal Functions
+                    function showErrorModal(message, focusElement) {
+                        document.getElementById('errorMessage').textContent = message;
+                        document.getElementById('errorModal').style.display = 'flex';
+                        
+                        // Store the element to focus after closing modal
+                        window.errorFocusElement = focusElement;
+                    }
+
+                    function closeErrorModal() {
+                        document.getElementById('errorModal').style.display = 'none';
+                        
+                        // Focus on the problematic field
+                        if (window.errorFocusElement) {
+                            window.errorFocusElement.focus();
+                            window.errorFocusElement = null;
+                        }
+                    }
+
+                    // Allow closing modal with Escape key
+                    document.addEventListener('keydown', function(event) {
+                        if (event.key === 'Escape') {
+                            const errorModal = document.getElementById('errorModal');
+                            if (errorModal.style.display === 'flex') {
+                                closeErrorModal();
+                            }
+                        }
+                    });
+
+                    document.getElementById('myForm').addEventListener('submit', async (event) => {
+                        event.preventDefault();
+
+                        // Validation: Check for blank fields
+                        const cmd = document.getElementById('cmd').value;
+                        const ssid = document.getElementById('ssid') ? document.getElementById('ssid').value : '';
+                        const password = document.getElementById('password') ? document.getElementById('password').value : '';
+
+                        // Check SSID and WiFi password when adding connection
+                        if (cmd === 'add') {
+                            if (!ssid || ssid.trim() === '') {
+                                showErrorModal('Please select a WiFi network from the dropdown list.', document.getElementById('ssid'));
+                                return;
+                            }
+                            if (!password || password.trim() === '') {
+                                showErrorModal('WiFi password is required to connect to the selected network.', document.getElementById('password'));
+                                return;
+                            }
+                        }
+
+                        progressBarLayer.style.display = 'flex';
+                        document.getElementById('rst').innerText = '--:--';
+
+                        const form = event.target;
+                        const formData = new FormData(form);
+
+                        try {
+                            const response = await fetch('/api/wifi/connect', {
+                                method: 'POST',
+                                body: formData,
+                                headers: { 'x-session-token': '<%= session_token %>' }
+                            });
+
+                            progressBarLayer.style.display = 'none';
+                            clearInterval(progressInterval);
+
+                            if (response.ok) {
+                                const result = await response.json();
+
+                                if (!result.success) {
+                                    document.getElementById('rst').innerText = `❌ Failure! (${result.error})`;
+                                    document.getElementById('rst').style.background = 'rgba(239, 68, 68, 0.1)';
+                                    document.getElementById('rst').style.color = '#dc2626';
+                                } else {
+                                    document.getElementById('rst').innerText = '✓ Success!';
+                                    document.getElementById('rst').style.background = 'rgba(16, 185, 129, 0.1)';
+                                    document.getElementById('rst').style.color = '#059669';
+
+                                    console.log('Success:', result);
+
+                                    const sec = (document.getElementById('cmd').value === 'add' ? 60 : 10);
+                                    document.getElementById('msg').innerHTML = (document.getElementById('cmd').value === 'add' ? 'Rebooting' : 'Updating');
+
+                                    overlay.style.display = 'flex';
+                                    startCountdown(sec);
+                                }
+                            } else {
+                                document.getElementById('rst').innerText = '❌ ' + response.statusText;
+                                document.getElementById('rst').style.background = 'rgba(239, 68, 68, 0.1)';
+                                document.getElementById('rst').style.color = '#dc2626';
+                            }
+
+                        } catch (error) {
+                            console.error('Error:', error);
+                            document.getElementById('rst').innerText = '❌ Connection Error';
+                            document.getElementById('rst').style.background = 'rgba(239, 68, 68, 0.1)';
+                            document.getElementById('rst').style.color = '#dc2626';
+                            progressBarLayer.style.display = 'none';
+                            clearInterval(progressInterval);
+                        }
+                    });
+                </script>
+            </div>
+
+            <div id="help" class="tab-content">
+                <h2>Help & Information</h2>
+                <div class="help-content">
+                    <p><strong>How to connect to WiFi:</strong></p>
+                    <p>1. Go to the <strong>SETUP</strong> tab</p>
+                    <p>2. Select your WiFi network from the dropdown</p>
+                    <p>3. Enter your WiFi password</p>
+                    <p>4. Enter the administrator password</p>
+                    <p>5. Click "Connect to Network"</p>
+                    <br>
+                    <p><strong>Note:</strong> The device will reboot after successfully connecting to a new network.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let activeTab = 'home'; // Set default to home
+
+        function showTab(tabId) {
+            if (activeTab !== tabId) {
+                document.querySelectorAll('.tab-content').forEach(content => {
+                    content.classList.remove('active-content');
+                });
+
+                document.querySelectorAll('.tab').forEach(tab => {
+                    tab.classList.remove('active');
+                });
+
+                document.getElementById(tabId).classList.add('active-content');
+                document.querySelector(`.tab[onclick="showTab('${tabId}')"]`).classList.add('active');
+
+                activeTab = tabId;
+            }
+        }
+
+        showTab(activeTab);
+
+        const overlay = document.getElementById('overlay');
+        const countdownDisplay = document.getElementById('countdown');
+
+        function startCountdown(seconds) {
+            let timeLeft = seconds;
+            countdownDisplay.textContent = timeLeft;
+
+            const countdownInterval = setInterval(() => {
+                timeLeft--;
+                countdownDisplay.textContent = timeLeft;
+
+                if (timeLeft <= 0) {
+                    clearInterval(countdownInterval);
+                    location.reload();
+                }
+            }, 1000);
+        }
+
+        const progressInterval = setInterval(updateProgress, 100);
+        const progressBarLayer = document.getElementById('progressBarLayer');
+        const progress = document.getElementById('progress');
+       
+        let totalTime = 5 * 60 * 1000;
+        let startTime = Date.now();
+
+        function updateProgress() {
+            let elapsedTime = Date.now() - startTime;
+            let progressPercentage = (elapsedTime / totalTime) * 100;
+
+            progress.style.width = progressPercentage + '%';
+
+            if (elapsedTime >= totalTime) {
+                progressBarLayer.style.display = 'none';
+                clearInterval(progressInterval);
+            }
+        }
+    </script>
+</body>
+
+</html>

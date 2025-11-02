@@ -1,0 +1,160 @@
+ /* Floating Animation Style 1 - Gentle Float */
+ .float-gentle {
+     transition: transform 0.3s ease;
+ }
+
+ .float-gentle:hover {
+     animation: gentleFloat 2s ease-in-out infinite;
+ }
+
+ @keyframes gentleFloat {
+
+     0%,
+     100% {
+         transform: translateY(0px);
+     }
+
+     50% {
+         transform: translateY(-20px);
+     }
+ }
+
+ /* Floating Animation Style 2 - Bounce Float */
+ .float-bounce {
+     transition: transform 0.3s ease;
+ }
+
+ .float-bounce:hover {
+     animation: bounceFloat 1s ease-in-out infinite;
+ }
+
+ @keyframes bounceFloat {
+
+     0%,
+     100% {
+         transform: translateY(0px);
+     }
+
+     25% {
+         transform: translateY(-15px);
+     }
+
+     50% {
+         transform: translateY(0px);
+     }
+
+     75% {
+         transform: translateY(-8px);
+     }
+ }
+
+ /* Floating Animation Style 3 - Rotating Float */
+ .float-rotate {
+     transition: transform 0.3s ease;
+ }
+
+ .float-rotate:hover {
+     animation: rotateFloat 3s ease-in-out infinite;
+ }
+
+ @keyframes rotateFloat {
+
+     0%,
+     100% {
+         transform: translateY(0px) rotate(0deg);
+     }
+
+     25% {
+         transform: translateY(-15px) rotate(5deg);
+     }
+
+     50% {
+         transform: translateY(0px) rotate(0deg);
+     }
+
+     75% {
+         transform: translateY(-15px) rotate(-5deg);
+     }
+ }
+
+ /* Floating Animation Style 4 - Wave Float */
+ .float-wave {
+     transition: transform 0.3s ease;
+ }
+
+ .float-wave:hover {
+     animation: waveFloat 2.5s ease-in-out infinite;
+ }
+
+ @keyframes waveFloat {
+
+     0%,
+     100% {
+         transform: translateY(0px) translateX(0px);
+     }
+
+     25% {
+         transform: translateY(-10px) translateX(10px);
+     }
+
+     50% {
+         transform: translateY(-20px) translateX(0px);
+     }
+
+     75% {
+         transform: translateY(-10px) translateX(-10px);
+     }
+ }
+
+ /* Floating Animation Style 5 - Scale Float */
+ .float-scale {
+     transition: transform 0.3s ease;
+ }
+
+ .float-scale:hover {
+     animation: scaleFloat 2s ease-in-out infinite;
+ }
+
+ @keyframes scaleFloat {
+
+     0%,
+     100% {
+         transform: translateY(0px) scale(1);
+     }
+
+     50% {
+         transform: translateY(-20px) scale(1.1);
+     }
+ }
+
+ /* Floating Animation Style 6 - Swing Float */
+ .float-swing {
+     transition: transform 0.3s ease;
+     transform-origin: top center;
+ }
+
+ .float-swing:hover {
+     animation: swingFloat 2s ease-in-out infinite;
+ }
+
+ @keyframes swingFloat {
+
+     0%,
+     100% {
+         transform: rotate(0deg) translateY(0px);
+     }
+
+     25% {
+         transform: rotate(10deg) translateY(-10px);
+     }
+
+     50% {
+         transform: rotate(0deg) translateY(-20px);
+     }
+
+     75% {
+         transform: rotate(-10deg) translateY(-10px);
+     }
+ }
+
+ 

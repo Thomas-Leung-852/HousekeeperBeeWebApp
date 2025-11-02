@@ -1,0 +1,32 @@
+/* Dialog close button */
+.close-button-container {
+    text-align: right;
+    /* Align text to the right */
+}
+
+.close-button {
+    background-color: black;
+    /* Black background */
+    color: white;
+    /* White text */
+    border: none;
+    /* No border */
+    border-radius: 25px;
+    /* Rounded corners */
+    padding: 5px 10px;
+    /* Padding */
+    font-size: 12px;
+    /* Font size reduced by 2 */
+    cursor: pointer;
+    /* Pointer cursor */
+    font-family: 'Helvetica Neue', sans-serif;
+    /* Similar font */
+    transition: background-color 0.3s;
+    /* Transition for hover effect */
+    margin-bottom: 10px;
+}
+
+.close-button:hover {
+    background-color: #333;
+    /* Darker shade on hover */
+}

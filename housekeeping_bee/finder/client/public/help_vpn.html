@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Important Notice: VPN Impact on Local Network</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f4f8;
+            color: #333;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #e74c3c;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin: 15px 0;
+        }
+        .alert {
+            background-color: #ffeeba;
+            border: 1px solid #ffeeba;
+            color: #856404;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .strong {
+            font-weight: bold;
+            color: #d9534f; /* Emphasize the text color */
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Important Notice!</h1>
+    <div class="alert">
+        <strong>Attention!</strong> Enabling your VPN can affect your ability to find the Housekeeper Bee server on your local network.
+    </div>
+    <p>
+        When the VPN is active, you <span class="strong">will not be able to find the Housekeeper Bee server</span>. This could lead to significant difficulties in connecting and using the application as intended.
+    </p>
+    <p>
+        For the best experience, please <span class="strong">disable your VPN</span> to ensure you can successfully connect to the Housekeeper Bee server on your local network.
+    </p>
+    <p>
+        Once you're done, feel free to re-enable your VPN for security!
+    </p>
+    <button class="button" onclick="closeAlert()">Close</button>
+</div>
+
+<script>
+    function closeAlert() {
+        window.close();
+    }
+</script>
+
+</body>
+</html>
