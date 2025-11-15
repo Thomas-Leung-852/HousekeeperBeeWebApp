@@ -1,6 +1,6 @@
 #! /usr/bin/bash
 
-docker pull bitnami/postgresql:16.4.0-debian-12-r12
+docker pull postgres:16.11
 cd ~/Desktop/housekeeping_bee/db
 export PG_HOUSEKEEPER_PWD="$HOUSEKEEPER_BEE_PWD_DB"
 echo "docker compose..."
