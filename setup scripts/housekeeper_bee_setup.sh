@@ -118,8 +118,16 @@ elif [ $1 == "part2" ]; then
 	show_msg "Install sensors."
 	./50_install_sensor.sh 
 	wait
+	show_msg "Setup finder server."
+        ./55_setup_finder.sh
+        wait 
 
-	show_msg "Complete and reboot."
+	show_msg "Completed!"
+
+        read -n 1 -s -r -p "Press any key to reboot..."              # Wait
+        echo                                                         # Add a newline after keypress
+        sudo reboot                                                 # reboot to apply the changes
+
 else
 	echo "error" 
 	show_msg "Oop! Something wrong!"
