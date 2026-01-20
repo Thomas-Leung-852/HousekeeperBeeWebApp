@@ -133,6 +133,19 @@ Please close your VPN application before running the Finder client. If VPN is ac
 
 ![VPN](https://static.wixstatic.com/media/0d7edc_da50b92f63ed4ab79b4f54dd4e5c2ea7~mv2.png)
 
+<br/>
+
+## ✨Application Updater (Recommended to install for keeping your application updated.)
+
+While you can download the JAR file to a USB drive containing an empty file named `update_housekeeper_be.txt` or `update_housekeeper_be_license.txt` for a manual update via http://ip:8088, the recommended and most effective solution is to use the `Application Updater`.
+
+Once installed, the `Application Updater` allows you to enable auto-updates or manually update through the web UI and a Linux cron job. It checks for updates twice a day and automatically schedules updates for the application and settings, ensuring you always have the latest enhancements and features.
+
+Download from GitHub:  https://github.com/Thomas-Leung-852/HousekeeperBeeWebAppUpdateTool
+
+![](https://static.wixstatic.com/media/0d7edc_13c46688237b46f8ace24bcf191e1608~mv2.jpg)       
+![](https://static.wixstatic.com/media/0d7edc_ba457a67b42b47c1b5b677e813600b11~mv2.jpg)       
+
 
 ## ✨Wiki
 ![Wiki](https://github.com/Thomas-Leung-852/HousekeeperBeeWebApp/wiki)  
