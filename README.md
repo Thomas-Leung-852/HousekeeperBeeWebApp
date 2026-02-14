@@ -49,7 +49,7 @@ https://github.com/Thomas-Leung-852/HousekeeperBeeWebApp/archive/refs/heads/main
 
 <img src="https://static.wixstatic.com/media/0d7edc_b360bcdc06ff40cd85dec66167ef788d~mv2.png/v1/fill/w_653,h_403,al_c,lg_1,q_85,enc_avif,quality_auto/0d7edc_b360bcdc06ff40cd85dec66167ef788d~mv2.png" width="400px">    
 <img src="https://static.wixstatic.com/media/0d7edc_612de77aaa774881910fd2b0a3c20bae~mv2.png/v1/fill/w_653,h_410,al_c,lg_1,q_85,enc_avif,quality_auto/0d7edc_612de77aaa774881910fd2b0a3c20bae~mv2.png" width="400px">    
-<img src="https://static.wixstatic.com/media/0d7edc_9e6c673d4e0246b5ace64edde3d087b1~mv2.png/v1/fill/w_457,h_366,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/0d7edc_9e6c673d4e0246b5ace64edde3d087b1~mv2.png" width="400px">    
+<img src="https://static.wixstatic.com/media/0d7edc_a2301f1f00b0484391704b65bb203fd0~mv2.png" width="400px">    
 
 ***⭐ Optional***   
 **Part D** - Integrate backend with iPhone APP (Housekeeper Bee Mobile)       
@@ -63,18 +63,40 @@ The way it works is you put a barcode label sticker on your box, scan it with th
  That way, the next time you want to know what's inside the box, instead of having to rely on scrawled text on the outside, you can just scan the label, 
  and it'll tell you everything that you put inside. In addition, if you are looking for an item, but not sure where it is, you can use the search bar to find out exactly what box to look for, 
  and where that box is located/supposed to be located. The intent of this app is to make it a lot easier to organize when you have large amounts of boxes and items to keep track of, 
- and also to make it easier to find items within those containers.
+ and also to make it easier to find items within those containers.       
 
-<img src="https://static.wixstatic.com/media/0d7edc_ecf143e7d8f8476897d9164a0c8ad031~mv2.png/v1/fill/w_290,h_567,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_8110.png" width="200px">
-<img src="https://static.wixstatic.com/media/0d7edc_d109f814d31642858b6d36055de64948~mv2.png/v1/fill/w_308,h_567,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_8111.png" width="200px">
-<img src="https://static.wixstatic.com/media/0d7edc_2bf769122808442d8220ed7b6d4526d0~mv2.png/v1/fill/w_264,h_567,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/scan%20barcode.png" width="200px">
-<img src="https://static.wixstatic.com/media/0d7edc_b1d684095bfb42a4bf4b0adc2825c48f~mv2.png/v1/fill/w_308,h_626,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/searching.png" width="200px">    
-<img src="https://static.wixstatic.com/media/0d7edc_506587880bc64c20b8d9c53e28243785~mv2.png/v1/fill/w_158,h_342,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_8113.png" width="200px">
-<img src="https://static.wixstatic.com/media/0d7edc_e91d8b3efa1e4d178d25dfbf53111b8b~mv2.png/v1/fill/w_158,h_342,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7797.png" width="200px">
-<img src="https://static.wixstatic.com/media/0d7edc_d3b534eeb1084171b349edc7c4a333dd~mv2.png/v1/fill/w_289,h_626,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/detail.png" width="200px">
-<img src="https://static.wixstatic.com/media/0d7edc_c86a5603a86b436484c449618bfa98fe~mv2.jpeg/v1/fill/w_274,h_626,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/boxes.jpeg" width="200px">   
+ It is IoT-enabled inventory tracking addresses the "hidden storage" issue by linking physical assets with digital intelligence. A user standing before a rack of identical or high-placed containers can easily access the app, which detects iBeacon signals nearby. This immediate connection allows the user to quickly identify each bin's unique contents without the hassle of manual inspection. By tapping into the app’s capabilities, users benefit from streamlined inventory management, enabling them to locate items effortlessly and avoid wasted time searching. Additionally, the app allows users to share and collaborate on storage information with family members, transforming passive storage into a visible, digitally managed inventory that enhances organization and efficiency through precise data visualization.
 
+
+<table>
+<tr style="page-break-inside: avoid;" >
+   <td><img src="https://static.wixstatic.com/media/0d7edc_ecf143e7d8f8476897d9164a0c8ad031~mv2.png/v1/fill/w_290,h_567,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_8110.png" width="200px">
+</td>
+   <td><img src="https://static.wixstatic.com/media/0d7edc_d109f814d31642858b6d36055de64948~mv2.png/v1/fill/w_308,h_567,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_8111.png" width="200px"></td>
+   <td><img src="https://static.wixstatic.com/media/0d7edc_2bf769122808442d8220ed7b6d4526d0~mv2.png/v1/fill/w_264,h_567,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/scan%20barcode.png" width="200px"></td>
+   <td><img src="https://static.wixstatic.com/media/0d7edc_e169331b458648599dea34528db48ebf~mv2.png" width="200px"></td>
+</tr>
+<tr style="page-break-inside: avoid;" >
+   <td><img src="https://static.wixstatic.com/media/0d7edc_506587880bc64c20b8d9c53e28243785~mv2.png/v1/fill/w_158,h_342,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_8113.png" width="200px"></td>
+   <td><img src="https://static.wixstatic.com/media/0d7edc_e91d8b3efa1e4d178d25dfbf53111b8b~mv2.png/v1/fill/w_158,h_342,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7797.png" width="200px"></td>
+   <td><img src="https://static.wixstatic.com/media/0d7edc_d3b534eeb1084171b349edc7c4a333dd~mv2.png/v1/fill/w_289,h_626,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/detail.png" width="200px"></td>
+   <td><img src="https://static.wixstatic.com/media/0d7edc_c86a5603a86b436484c449618bfa98fe~mv2.jpeg/v1/fill/w_274,h_626,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/boxes.jpeg" width="200px"></td>
+</tr>
+<tr style="page-break-inside: avoid;" >
+   <td><img src="https://static.wixstatic.com/media/0d7edc_32ba3b19e05843e983cf04d1c6a1662c~mv2.png" width="200px"></td>
+   <td><img src="https://static.wixstatic.com/media/0d7edc_a38077be92a94c728615243e9c2dca18~mv2.png" width="200px"></td>
+</tr>
+</table>
+  
 ![](https://static.wixstatic.com/media/0d7edc_f0531522998c4ed08d8d7cdd991a2968~mv2.jpeg/v1/crop/x_0,y_43,w_2016,h_1403/fill/w_707,h_490,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7445.jpeg)      
+
+
+### Supported iBeacon
+
+- HolyIot (Model: 16032 and 21014)
+- April Brother (Model: EEK-N20)
+
+![](https://ae01.alicdn.com/kf/S99a99879c9694a3fbc7b707e58bf90fa4.jpg)
 
 <a href="https://www.youtube.com/watch?v=nN9iC1CJG3g" target="_blank">Housekeeper Bee Mobile App Demo</a>    
 
@@ -146,6 +168,20 @@ Download from GitHub:  https://github.com/Thomas-Leung-852/HousekeeperBeeWebAppU
 ![](https://static.wixstatic.com/media/0d7edc_13c46688237b46f8ace24bcf191e1608~mv2.jpg)       
 ![](https://static.wixstatic.com/media/0d7edc_ba457a67b42b47c1b5b677e813600b11~mv2.jpg)       
 
+## ✨ System Administration 
+
+http://{ip}:8088   
+
+You can disable unused modules to save memory and enhance system performance. Additionally, you can deploy AI system modules on more powerful machines. The service-oriented architecture enables all components to run seamlessly and function effectively on the same local network.     
+
+- Monitoring system health & Schedule shutdown and bootup time    
+- Flexible Module Management: Empower users to manage modules according to their specific requirements.   
+- Modular Deployment: Facilitate the deployment of modules across different machines seamlessly.    
+
+<br>
+
+![](https://static.wixstatic.com/media/0d7edc_a2301f1f00b0484391704b65bb203fd0~mv2.png) 
+![](https://static.wixstatic.com/media/0d7edc_0753325472c64daebf1f78157619f3a1~mv2.png) 
 
 ## ✨Wiki
 ![Wiki](https://github.com/Thomas-Leung-852/HousekeeperBeeWebApp/wiki)  
