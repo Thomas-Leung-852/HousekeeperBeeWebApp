@@ -183,6 +183,138 @@ You can disable unused modules to save memory and enhance system performance. Ad
 ![](https://static.wixstatic.com/media/0d7edc_a2301f1f00b0484391704b65bb203fd0~mv2.png) 
 ![](https://static.wixstatic.com/media/0d7edc_0753325472c64daebf1f78157619f3a1~mv2.png) 
 
+<br>
+
+## ✨Housekeeper Bee Vision service
+
+You can get it from https://github.com/Thomas-Leung-852/housekeeper-bee-vision      
+
+**Housekeeper Bee Vision Service** is a production-ready AI microservice that provides **Optical Character Recognition (OCR)** and **Object Detection** capabilities. Built with Python FastAPI and optimized for mobile devices, it serves as the "eyes" for the Housekeeper Bee Household and Inventory Management ecosystem. You can access the vision administration page via https://{your ip}:8000/login .The default user name is 'admin' and password is 'pwd'.
+
+### - Create an API key to access the vision service 
+
+![](https://static.wixstatic.com/media/0d7edc_7aadf374e125491cab443bb8a239aa1d~mv2.png)
+
+### - Add the vision url and API key to `application.properties` file of Housekeeper Bee java spring boot application and then reboot.
+
+
+```
+#==================================================
+# Apply to vesion 1.11.0
+# Connect to vision service
+#==================================================
+vision.api.url={Vision service IP}     # Exmaple https://192.168.50.102:8000
+vision.api.key={Vision API key}
+```       
+
+### - After connecting to the vision service, you will find the `OCR Scanner` and `Object Detection` buttons in both the add and edit UI for storage.     
+
+
+![](https://static.wixstatic.com/media/0d7edc_1a6e20af30e0443ba0caff385a82e10e~mv2.png)
+
+<br>
+
+## ✨Housekeeper Bee Ecosystem Architecture Diagram
+
+Housekeeper Bee Ecosystem Architecture     
+Breaking Free from the Monolith    
+
+**Housekeeper Bee** reimagines home management software through a **decentralized, 
+modular architecture** that puts you in control. Unlike traditional all-in-one 
+applications where features are hardwired and unchangeable, Housekeeper Bee is 
+built as a **loosely-coupled ecosystem** of specialized services—each independently 
+deployable, upgradeable, and optional—**optimized to run efficiently on Raspberry 
+Pi 5 with just 4GB RAM**.
+
+**At the heart** is a lightweight core application that orchestrates inventory 
+management and user workflows. **Orbiting around it** are powerful AI capabilities—
+OCR for text recognition, object detection for visual cataloging, LLM-powered 
+report generation—alongside physical integrations like iBeacon location tracking 
+and Zigbee environmental sensors—each living as an autonomous microservice that 
+can be installed on-demand, enabled with a click, or disabled when not needed.
+
+**This architectural approach delivers unprecedented flexibility:**
+
+✨ **Install What You Need** → Start with basic inventory, add AI modules as your needs grow  
+🔄 **Enable/Disable On-the-Fly** → Toggle services instantly through the admin panel  
+🚀 **Future-Proof Design** → New AI models? Just plug them in—no app rebuild required  
+🧩 **Mix and Match** → Combine services in creative ways we haven't imagined  
+📦 **No Bloat** → Run only what you use, conserve system resources  
+🏠 **Self-Hosted** → Runs on Raspberry Pi 5 (4GB) with room to spare
+
+The diagram below illustrates how these independent services communicate through well-defined APIs while maintaining complete operational autonomy. Like instruments in an orchestra, each plays its part perfectly while contributing to a harmonious whole.     
+
+<br>
+
+```mermaid
+%%{init: {'flowchart': {'rankSpacing': 100, 'nodeSpacing': 70, 'curve': 'basis'}} }%%
+flowchart TB
+    subgraph UI ["UI & Integrations"]
+        subgraph x ["Home Access"]
+            Mobile["📱 Mobile App<br/>iOS APP<br/>"]
+            WebApp["💻 Web App<br/>Desktop Browser"]
+            Web["💻 Web Dashboard<br/>Browser-based<br/><i>Admin panel</i>"]
+            Claude["🖥️ Claude Desktop<br/>MCP Server (STDIO)<br/><i>AI-powered interface</i>"]            
+        end
+        subgraph y ["Internet Access"]
+            Telegram["💬 Telegram Bot<br/><i>Chat-based control</i>"]         
+        end
+    end
+
+    subgraph rpi5 ["Raspberry Pi 5"]
+
+        subgraph HKBP ["Housekeeper Bee Platform"]
+            direction TB
+            AA["AI Agent<br/>Ollama <br/>(Cloud + Local )"]
+            Core["🏠 Housekeeper Bee Core<br/>Inventory Management System<br/>Java Spring Boot"]
+            Vision["👁️ Vision Service<br/>OCR + Object Detection<br/>FastAPI + EasyOCR + YOLOv8"]
+            ReportSvc["🤖 Report Server service <br/>AI Report Generation<br/>Ollama Cloud Integration"]
+            
+            Core -.->|"REST API"| ReportSvc  
+            Core <--> ReportSvc
+            Core <--> Vision        
+        end
+
+        subgraph SmartHome ["Smart Home"]
+            Zigbee["📡 Zigbee Hub<br/>IoT Devices<br/><i>Smart home integration</i>"]  
+        end
+    end
+
+    subgraph Storage ["Data & Storage Layer"]
+        DB[("🗄️ Database<br/>PostgreSQL<br/><i>Persistent storage</i>")]        
+        Files[("📦 File Storage<br/>Images & Models<br/><i>SQLite</i>")]
+        Cache[("⚡ Cache<br/>Redis<br/><i>High-speed data</i>")]
+        RptFiles[("📦 File Storage<br/>Report Template & Prompts")]
+    end
+
+    %% Connections
+    AA --> Cache
+    Core --> DB
+    Vision --> Files
+    ReportSvc --> RptFiles
+    
+    Mobile -->|"HTTPS API"| Core
+    Mobile -->|"Camera → OCR"| Vision
+    WebApp -->|"HTTPS API"| Core
+    WebApp -->|"Camera → OCR"| Vision
+    WebApp -->|"Report Generation"| ReportSvc
+    Web -->|"Admin Interface"| Core 
+    Zigbee -->|"MQTT/Events"| AA   
+    Telegram -->|"REST API"| AA      
+    Core -.->|"REST API"| AA
+    Claude -->|"REST API"| Core
+
+    %% Styles
+    style Core fill:#FF0000,stroke:#333,stroke-width:3px,color:#fff
+    style Vision fill:#4CAF50,stroke:#333,stroke-width:3px,color:#fff
+    style ReportSvc fill:#2196F3,stroke:#333,stroke-width:3px,color:#fff
+    style DB fill:#E91E63,stroke:#333,stroke-width:2px,color:#fff
+    style Cache fill:#FF9800,stroke:#333,stroke-width:2px,color:#fff
+    style Files fill:#9C27B0,stroke:#333,stroke-width:2px,color:#fff
+    style AA fill:#CA00CA,stroke:#333,stroke-width:2px,color:#fff
+```
+
+
 ## ✨Wiki
 ![Wiki](https://github.com/Thomas-Leung-852/HousekeeperBeeWebApp/wiki)  
 
