@@ -1,12 +1,16 @@
-  GNU nano 8.1                                                                                   backup.sh                                                                                            #/bin/bash!
+#!/bin/bash
+
+if [ -z "$HOUSEKEEPER_BEE_HOME" ]; then
+   HOUSEKEEPER_BEE_HOME=$(dirname "$HOUSEKEEPER_BEE_SETUP_PATH")
+fi
 
 CONTAINER_NAME=db-postgres_container-1
 DB_NAME=housekeeper2024v1
 DB_PWD=$HOUSEKEEPER_BEE_PWD_DB
 FAMILY_ID=$1
 FOLDER_NAME='HousekeeperBackup'_$(date '+%Y%m%d%H%M%S')
-DEST_FOLDER=~/Desktop/housekeeping_bee/backup
-IMG_FOLDER=~/Desktop/housekeeping_bee/files/uploads
+DEST_FOLDER=$HOUSEKEEPER_BEE_HOME/housekeeping_bee/backup
+IMG_FOLDER=$HOUSEKEEPER_BEE_HOME/housekeeping_bee/files/uploads
 PWD=$HOUSEKEEPER_BEE_PWD_SUDO
 
 if [ ! -d "$FAMILY_ID" ]; then

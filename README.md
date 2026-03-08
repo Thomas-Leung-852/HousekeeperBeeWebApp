@@ -157,9 +157,9 @@ Please close your VPN application before running the Finder client. If VPN is ac
 
 <br/>
 
-## ✨Application Updater (Recommended to install for keeping your application updated.)
+## ✨Application Updater (Recommended to install for keeping your application updated. Housekeeper Bee v1.12.0 or higher - Default installed and enabled)
 
-While you can download the JAR file to a USB drive containing an empty file named `update_housekeeper_be.txt` or `update_housekeeper_be_license.txt` for a manual update via http://ip:8088, the recommended and most effective solution is to use the `Application Updater`.
+While you can download the JAR file to a USB drive containing an empty file named `update_housekeeper_bee.txt` or `update_housekeeper_bee_license.txt` for a manual update via http://ip:8088, the recommended and most effective solution is to use the `Application Updater`.
 
 Once installed, the `Application Updater` allows you to enable auto-updates or manually update through the web UI and a Linux cron job. It checks for updates twice a day and automatically schedules updates for the application and settings, ensuring you always have the latest enhancements and features.
 
@@ -294,9 +294,9 @@ flowchart TB
     ReportSvc --> RptFiles
     
     Mobile -->|"HTTPS API"| Core
-    Mobile -->|"Camera → OCR"| Vision
+    Mobile -->|"Camera → OCR <br/> + Object Detection"| Vision
     WebApp -->|"HTTPS API"| Core
-    WebApp -->|"Camera → OCR"| Vision
+    WebApp -->|"Camera → OCR<br/> + Object Detection"| Vision
     WebApp -->|"Report Generation"| ReportSvc
     Web -->|"Admin Interface"| Core 
     Zigbee -->|"MQTT/Events"| AA   

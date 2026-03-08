@@ -45,6 +45,7 @@ if [ -z "$1"  ]; then
 	echo 'export HOUSEKEEPER_BEE_PWD_SUDO='$su_pwd >> $fn
 	echo 'export HOUSEKEEPER_BEE_PWD_DB='$db_pwd >> $fn
 	echo 'export HOUSEKEEPER_BEE_SETUP_PATH="'$setup_path'"' >> $fn
+	echo 'export HOUSEKEEPER_BEE_HOME="'$(dirname "$setup_path")'"' >> $fn
 	echo '# housekeeper_bee - environment variables::end' >> $fn
 	# echo '' >> $fn
 	echo 'file:' $fn ' updated.'
@@ -120,6 +121,9 @@ elif [ $1 == "part2" ]; then
 	wait
 	show_msg "Setup finder server."
         ./55_setup_finder.sh
+        wait 
+	show_msg "Setup App Updater."
+        ./60_install_app_updater.sh
         wait 
 
 	show_msg "Completed!"

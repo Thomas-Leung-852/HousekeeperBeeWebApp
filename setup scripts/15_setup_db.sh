@@ -1,7 +1,7 @@
 #! /usr/bin/bash
 
 docker pull postgres:16.11
-cd ~/Desktop/housekeeping_bee/db
+cd $HOUSEKEEPER_BEE_HOME/housekeeping_bee/db
 export PG_HOUSEKEEPER_PWD="$HOUSEKEEPER_BEE_PWD_DB"
 echo "docker compose..."
 docker compose -f housekeeper.yaml up -d

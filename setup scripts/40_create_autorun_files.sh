@@ -9,7 +9,7 @@ sudo touch ~/.config/autostart/lauch_java_prog_2.desktop
 
 echo "[Desktop Entry]
 Type=Application
-Exec=gnome-terminal -- bash -c \"~/Desktop/housekeeping_bee/files/prog/admin/run3.sh; exec bash\"
+Exec=gnome-terminal -- bash -c \"$HOUSEKEEPER_BEE_HOME/housekeeping_bee/files/prog/admin/run3.sh; exec bash\"
 Hidden=false
 NoDisplay=false
 X-GNOME-Autostart-enabled=true
@@ -21,7 +21,7 @@ Comment=
 
 echo "[Desktop Entry]
 Type=Application
-Exec=gnome-terminal -- bash -c \"~/Desktop/housekeeping_bee/files/prog/run3.sh; exec bash\"
+Exec=gnome-terminal -- bash -c \"$HOUSEKEEPER_BEE_HOME/housekeeping_bee/files/prog/run3.sh; exec bash\"
 Hidden=false
 NoDisplay=false
 X-GNOME-Autostart-enabled=true

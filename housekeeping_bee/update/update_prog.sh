@@ -11,8 +11,13 @@ found(){
 
 #Do update
 sleep 1
+
+if [ -z "$HOUSEKEEPER_BEE_HOME" ]; then
+   HOUSEKEEPER_BEE_HOME=$(dirname "$HOUSEKEEPER_BEE_SETUP_PATH")
+fi
+
 pwd="$HOUSEKEEPER_BEE_PWD_SUDO"
-fdest=~/Desktop/housekeeping_bee/files/prog
+fdest=$HOUSEKEEPER_BEE_HOME/housekeeping_bee/files/prog
 fname=$(lsblk | grep -i "sda1" | awk '{print $7}')
 
 if found $fname/update_housekeeper_bee.txt; then
