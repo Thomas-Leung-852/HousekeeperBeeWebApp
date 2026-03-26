@@ -25,34 +25,57 @@ Key Features of this app extends the functionality of web-based application :
 
 5. iBeacon Location Services: Easily locate iBeacons to finding the missing storage boxes.
 
-## ✨Download a ZIP file
+## ✨Get the Code 
+
+### Option A: Download a ZIP file
 
 https://github.com/Thomas-Leung-852/HousekeeperBeeWebApp/archive/refs/heads/main.zip
 
+### or   
 
-## ✨Videos
+### Option B: Git Clone
 
-**Part A** - Install Raspberry Pi OS (Ubuntu 24.04 LTS)  
-<a href="https://youtu.be/p9k2Mc3MpTE?si=8Wu3y2Xy_TV1Z2vv" target="_blank">https://youtu.be/p9k2Mc3MpTE?si=8Wu3y2Xy_TV1Z2vv</a>
+```
+git clone https://github.com/Thomas-Leung-852/HousekeeperBeeWebApp.git
+```
 
-**Part B** - Setup Ubuntu   
-<a href="https://youtu.be/0s-VTIfdZuI?si=qQCB3shDIud8lznI" target="_blank">https://youtu.be/0s-VTIfdZuI?si=qQCB3shDIud8lznI</a>
+## ✨Setup Procedure
+
+### Part A - Install Raspberry Pi OS (Ubuntu <u>Desktop</u> 24.04 LTS)  
+Dome: <a href="https://youtu.be/p9k2Mc3MpTE?si=8Wu3y2Xy_TV1Z2vv" target="_blank">https://youtu.be/p9k2Mc3MpTE?si=8Wu3y2Xy_TV1Z2vv</a>
+
+![](https://pimylifeup.com/wp-content/uploads/2024/09/Raspberry-Pi-Ubuntu-07-Choose-to-Install-Ubuntu-Desktop.jpg)
+
+Source: https://pimylifeup.com/raspberry-pi-ubuntu/
+
+### Part B - Setup Ubuntu Desktop  
+Demo: <a href="https://youtu.be/0s-VTIfdZuI?si=qQCB3shDIud8lznI" target="_blank">https://youtu.be/0s-VTIfdZuI?si=qQCB3shDIud8lznI</a>
 
       
 <img src="https://static.wixstatic.com/media/0d7edc_17d7c6d5f181431dba2d0b371939355a~mv2.png/v1/fill/w_149,h_144,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/0d7edc_17d7c6d5f181431dba2d0b371939355a~mv2.png" width="100px">    
 
-**Part C** - How to use shell scripts to setup the Housekeeper Bee Backend (Household Items Management Server)    
+### Part C - How to use shell scripts to setup the Housekeeper Bee Backend (Household Items Management Server)    
 
 [ Method 1 ] One command setup - 
 <a href="https://youtu.be/D7ZOcX-viFg?si=SHwjjFFe7CXiHBII" target="_blank">https://youtu.be/D7ZOcX-viFg?si=SHwjjFFe7CXiHBII</a>     
 [ Method 2 ] For advanced users - https://youtu.be/Q1--e4d7-3I?si=mauKBkNFu-rs_9SU
 
+## ✨ Test Connection
+
+https://{your-ip-address}:8443
+
 <img src="https://static.wixstatic.com/media/0d7edc_b360bcdc06ff40cd85dec66167ef788d~mv2.png/v1/fill/w_653,h_403,al_c,lg_1,q_85,enc_avif,quality_auto/0d7edc_b360bcdc06ff40cd85dec66167ef788d~mv2.png" width="400px">    
 <img src="https://static.wixstatic.com/media/0d7edc_612de77aaa774881910fd2b0a3c20bae~mv2.png/v1/fill/w_653,h_410,al_c,lg_1,q_85,enc_avif,quality_auto/0d7edc_612de77aaa774881910fd2b0a3c20bae~mv2.png" width="400px">    
-<img src="https://static.wixstatic.com/media/0d7edc_a2301f1f00b0484391704b65bb203fd0~mv2.png" width="400px">    
 
-***⭐ Optional***   
-**Part D** - Integrate backend with iPhone APP (Housekeeper Bee Mobile)       
+<br/>
+
+http://{your-ip-address}:8088     
+
+<img src="https://static.wixstatic.com/media/0d7edc_a2301f1f00b0484391704b65bb203fd0~mv2.png" width="400px">     
+
+## ✨ Install iOS APP
+
+### Part D - Integrate backend with iPhone APP (Housekeeper Bee Mobile)       
 <a href="https://youtu.be/Hd59EvuuvnE?si=aSDc4aFpYkUrz_U9" target="_blank">https://youtu.be/Hd59EvuuvnE?si=aSDc4aFpYkUrz_U9</a> 
 
 ![](https://static.wixstatic.com/media/0d7edc_1bcb878f532a46ac85d3a9d6749238a7~mv2.png/v1/fill/w_119,h_115,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/0d7edc_1bcb878f532a46ac85d3a9d6749238a7~mv2.png) ![](https://static.wixstatic.com/media/0d7edc_676bcb046f9347289b048dc66848717b~mv2.png/v1/fill/w_113,h_115,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/0d7edc_676bcb046f9347289b048dc66848717b~mv2.png)   
@@ -87,21 +110,38 @@ The way it works is you put a barcode label sticker on your box, scan it with th
    <td><img src="https://static.wixstatic.com/media/0d7edc_a38077be92a94c728615243e9c2dca18~mv2.png" width="200px"></td>
 </tr>
 </table>
-  
+
+## ✨ Barcode template
+
+You can free to use the Brother printer label template and Excel template. Those files can be found from the ***housekeeping_bee/label templates/windows*** folder.     
+
 ![](https://static.wixstatic.com/media/0d7edc_f0531522998c4ed08d8d7cdd991a2968~mv2.jpeg/v1/crop/x_0,y_43,w_2016,h_1403/fill/w_707,h_490,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7445.jpeg)      
 
 
-### Supported iBeacon
+## ✨ Supported iBeacon
 
 - HolyIot (Model: 16032 and 21014)
 - April Brother (Model: EEK-N20)
 
 ![](https://ae01.alicdn.com/kf/S99a99879c9694a3fbc7b707e58bf90fa4.jpg)
 
+## ✨ iOS App: Link Storage to Barcode / NFC / iBeacon
+
 <a href="https://www.youtube.com/watch?v=nN9iC1CJG3g" target="_blank">Housekeeper Bee Mobile App Demo</a>    
 
 [![](https://markdown-videos-api.jorgenkh.no/youtube/nN9iC1CJG3g)](https://youtu.be/nN9iC1CJG3g)    
 
+
+## ✨When should use iBeacon
+
+<table>
+<tr><td>    
+<img src="https://static.wixstatic.com/media/0d7edc_a38077be92a94c728615243e9c2dca18~mv2.png/v1/fill/w_308,h_626,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_0958_PNG.png" width="200px">    
+</td><td>
+<img src="https://static.wixstatic.com/media/0d7edc_e169331b458648599dea34528db48ebf~mv2.png/v1/fill/w_274,h_626,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_0959_PNG.png" width="200px">    
+</td>
+</tr>
+</table>
 
 ## ✨Finder (Client/Server)
 

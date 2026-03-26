@@ -4,6 +4,15 @@
 
 Date formate: yyyy/MM/dd   
 Version: Major.{New/enhancement}.{Bug fix}   
+---
+Release Date: 2026/03/26	
+Version: 1.12.1
+Build Number: 202603260800-043
+
+[Bug fixed]
+1. Search by tag - fixed single quote cause auto-complete failed 
+2. tag not allow to use single quote 
+3. Storage -> item editor not support Chinese single quote 
 
 ---
 Release Date: 2026/03/08    
