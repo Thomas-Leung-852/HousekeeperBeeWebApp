@@ -1,12 +1,26 @@
 
 ---   
-### Housekeeper Bee Release Note ###   
-
-Date formate: yyyy/MM/dd   
-Version: Major.{New/enhancement}.{Bug fix}   
+## Housekeeper Bee Release Note
+#### Date formate: yyyy/MM/dd     
+#### Version: Major.{New/enhancement}.{Bug fix} 
 ---
-Release Date: 2026/03/26	
-Version: 1.12.1
+Release Date: 2026/04/01    	  
+Version: 1.13.0        
+Build Number: 202604010800-044    
+
+[Modified]
+1. storage detail page - added "show all locations" button
+2. Revamped the login page
+
+[Bugs Fixed]
+1. authentication missing exception handling
+
+![](https://static.wixstatic.com/media/0d7edc_5b3e7a1a21584d2784973972b1c90e2e~mv2.png)
+![](https://static.wixstatic.com/media/0d7edc_bee6a9f00567479a8c8b209d045fc695~mv2.png)
+
+---
+Release Date: 2026/03/26      
+Version: 1.12.1    
 Build Number: 202603260800-043
 
 [Bug fixed]
