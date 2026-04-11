@@ -1,6 +1,19 @@
 # HousekeeperBeeWebApp
 
-## Project Background
+## ✨What is Housekeeper Bee?
+
+I built this for myself after spending too much time digging through 
+boxes looking for things I knew I owned.
+
+Housekeeper Bee is a free, self-hosted web app that runs on a 
+Raspberry Pi 5. You label your storage boxes with barcodes, NFC 
+tags, or iBeacons — then search or ask the AI what's in them and 
+where they are. Everything stays on your own hardware.
+
+**No subscription. No cloud. No catch.**
+
+
+## ✨Project Background
 
 https://vneticworkshop.wixsite.com/thomasleungportfolio/copy-of-projects
 
@@ -10,8 +23,7 @@ https://vneticworkshop.wixsite.com/thomasleungportfolio/copy-of-projects
 
 This page provides Household Items Management Web App binary and setup scripts.
 
-We are thrilled to present our cutting-edge web-based application designed to simplify storage management for families and individuals. In an era where urban living spaces are becoming increasingly compact, our app meets the growing demand for effective organization and efficient tracking of storage resources. It is 100% available for Desktop browsers. 
-Housekeeper Bee Mobile​​ App designed to integrate seamlessly with our Household Items management web-based application running on your on-premise Raspberry Pi 5 (2GB) server. Household Items Management: Keep track of assets stored in storage boxes across various locations, ensuring you know exactly where everything is.
+I built this to solve a simple personal problem: I could never find anything in my own storage boxes. Housekeeper Bee is a self-hosted web app that tracks what's inside your storage boxes and where they are — using barcodes, NFC tags, and iBeacon. It runs on a Raspberry Pi 5 and keeps all your data local.    
 
 Key Features of this app extends the functionality of web-based application :
 
@@ -111,12 +123,15 @@ The way it works is you put a barcode label sticker on your box, scan it with th
 </tr>
 </table>
 
-## ✨ Barcode template
+## ✨ Barcode template (Brother TZe-251/ TZe-615/ DR1201/ DR2205/ DR2251) and NFC Tag (ISO 144443)
 
-You can free to use the Brother printer label template and Excel template. Those files can be found from the ***housekeeping_bee/label templates/windows*** folder.     
+You can free to use the Brother printer label template and Excel template.    
+Those files can be found from  https://github.com/Thomas-Leung-852/HousekeeperBeeWebApp/wiki/Print-your-own-labels 
 
-![](https://static.wixstatic.com/media/0d7edc_f0531522998c4ed08d8d7cdd991a2968~mv2.jpeg/v1/crop/x_0,y_43,w_2016,h_1403/fill/w_707,h_490,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7445.jpeg)      
+![](https://static.wixstatic.com/media/0d7edc_f0531522998c4ed08d8d7cdd991a2968~mv2.jpeg/v1/crop/x_0,y_43,w_2016,h_1403/fill/w_707,h_490,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7445.jpeg)       
 
+
+![](https://static.wixstatic.com/media/0d7edc_f943f88761b34c26bdd3ae5e494825c1~mv2.jpg)
 
 ## ✨ Supported iBeacon
 
@@ -229,7 +244,9 @@ You can disable unused modules to save memory and enhance system performance. Ad
 
 You can get it from https://github.com/Thomas-Leung-852/housekeeper-bee-vision      
 
-**Housekeeper Bee Vision Service** is a production-ready AI microservice that provides **Optical Character Recognition (OCR)** and **Object Detection** capabilities. Built with Python FastAPI and optimized for mobile devices, it serves as the "eyes" for the Housekeeper Bee Household and Inventory Management ecosystem. You can access the vision administration page via https://{your ip}:8000/login .The default user name is 'admin' and password is 'pwd'.
+**Housekeeper Bee Vision Service** is a production-ready AI microservice that provides **Optical Character Recognition (OCR)** and **Object Detection** capabilities. Built with Python FastAPI and optimized for mobile devices, it serves as the "eyes" for the Housekeeper Bee Household and Inventory Management ecosystem. You can access the vision administration page via https://{your ip}:8000/login .The default user name is 'admin' and password is 'pwd'.       
+
+⚠️ Please change the default password immediately after your first login.     
 
 ### - Create an API key to access the vision service 
 
