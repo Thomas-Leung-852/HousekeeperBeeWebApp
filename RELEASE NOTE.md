@@ -4,6 +4,14 @@
 #### Date formate: yyyy/MM/dd     
 #### Version: Major.{New/enhancement}.{Bug fix} 
 ---
+Release Date: 2026/04/13	
+Version: 1.13.1
+Build Number: 202604130800-045
+
+[Bugs Fixed]
+1. UI - Storage Details, Change Location, Search Storage 
+
+---
 Release Date: 2026/04/01    	  
 Version: 1.13.0        
 Build Number: 202604010800-044    
