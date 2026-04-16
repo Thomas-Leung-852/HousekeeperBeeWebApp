@@ -93,14 +93,12 @@ http://{your-ip-address}:8088
 ![](https://static.wixstatic.com/media/0d7edc_1bcb878f532a46ac85d3a9d6749238a7~mv2.png/v1/fill/w_119,h_115,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/0d7edc_1bcb878f532a46ac85d3a9d6749238a7~mv2.png) ![](https://static.wixstatic.com/media/0d7edc_676bcb046f9347289b048dc66848717b~mv2.png/v1/fill/w_113,h_115,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/0d7edc_676bcb046f9347289b048dc66848717b~mv2.png)   
 Download APP from Apple App Store: https://apps.apple.com/us/app/housekeeper-bee/id6742815735       
 
-An app as a way to give people a much easier and efficient way to label and track their boxes without them having to write and rewrite everything on the side of their box.
-The way it works is you put a barcode label sticker on your box, scan it with the app, and then type in everything that you're putting inside.
- That way, the next time you want to know what's inside the box, instead of having to rely on scrawled text on the outside, you can just scan the label, 
- and it'll tell you everything that you put inside. In addition, if you are looking for an item, but not sure where it is, you can use the search bar to find out exactly what box to look for, 
- and where that box is located/supposed to be located. The intent of this app is to make it a lot easier to organize when you have large amounts of boxes and items to keep track of, 
- and also to make it easier to find items within those containers.       
+#### The Mobile Touch Point - Housekeeper Bee iPhone App     
+Gone are the days of scrawling labels on boxes that fade, peel, or become unreadable. Housekeeper Bee transforms your iPhone into a professional-grade storage management tool, replacing dedicated barcode scanners, NFC readers, and Bluetooth detectors with the one device already in your pocket.
+Attach a barcode label to any box, scan it once, and build a complete digital record of everything inside, complete with photos, descriptions, and location data. The next time you need something, search the app and it tells you exactly which box it is in and where that box lives.
+Housekeeper Bee goes further by solving the hidden storage problem. Overhead totes, high shelves, and stacked containers are no longer black holes. Using iBeacon technology, the app detects Bluetooth signals tied to both the storage location and the box, giving you instant visibility into what is there before you climb a ladder or move a single item. Walk into a room and your storage announces itself to you.    
 
- It is IoT-enabled inventory tracking addresses the "hidden storage" issue by linking physical assets with digital intelligence. A user standing before a rack of identical or high-placed containers can easily access the app, which detects iBeacon signals nearby. This immediate connection allows the user to quickly identify each bin's unique contents without the hassle of manual inspection. By tapping into the app’s capabilities, users benefit from streamlined inventory management, enabling them to locate items effortlessly and avoid wasted time searching. Additionally, the app allows users to share and collaborate on storage information with family members, transforming passive storage into a visible, digitally managed inventory that enhances organization and efficiency through precise data visualization.
+The app also supports household collaboration. Family members can access shared storage data, find items independently, and contribute to a living inventory that grows with your home.
 
 
 <table>
@@ -114,10 +112,12 @@ The way it works is you put a barcode label sticker on your box, scan it with th
 <tr style="page-break-inside: avoid;" >
    <td><img src="https://static.wixstatic.com/media/0d7edc_506587880bc64c20b8d9c53e28243785~mv2.png/v1/fill/w_158,h_342,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_8113.png" width="200px"></td>
    <td><img src="https://static.wixstatic.com/media/0d7edc_e91d8b3efa1e4d178d25dfbf53111b8b~mv2.png/v1/fill/w_158,h_342,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7797.png" width="200px"></td>
-   <td><img src="https://static.wixstatic.com/media/0d7edc_d3b534eeb1084171b349edc7c4a333dd~mv2.png/v1/fill/w_289,h_626,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/detail.png" width="200px"></td>
-   <td><img src="https://static.wixstatic.com/media/0d7edc_c86a5603a86b436484c449618bfa98fe~mv2.jpeg/v1/fill/w_274,h_626,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/boxes.jpeg" width="200px"></td>
+   <td><img src="https://static.wixstatic.com/media/0d7edc_1766b7c54c304d3aba3c971a2126a332~mv2.png/v1/fill/w_284,h_616,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/004_PNG.png" width="200px"></td>
+   <td><img src="https://static.wixstatic.com/media/0d7edc_3d887c6f3677499e9cd9bd8a8d0f883a~mv2.png" width="200px"></td>
 </tr>
 <tr style="page-break-inside: avoid;" >
+   <td><img src="https://static.wixstatic.com/media/0d7edc_8b8247a0ec144ae6b42a8922ff9cca2a~mv2.png/v1/fill/w_290,h_626,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/003_PNG.png" width="200px"></td>
+   <td><img src="https://static.wixstatic.com/media/0d7edc_6a0a287317444737b8e5edcec0a78024~mv2.png" width="200px"></td>
    <td><img src="https://static.wixstatic.com/media/0d7edc_32ba3b19e05843e983cf04d1c6a1662c~mv2.png" width="200px"></td>
    <td><img src="https://static.wixstatic.com/media/0d7edc_a38077be92a94c728615243e9c2dca18~mv2.png" width="200px"></td>
 </tr>
