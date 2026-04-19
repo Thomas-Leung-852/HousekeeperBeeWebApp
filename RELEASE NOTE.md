@@ -4,6 +4,15 @@
 #### Date formate: yyyy/MM/dd     
 #### Version: Major.{New/enhancement}.{Bug fix} 
 ---
+Release Date: 2026/04/20	
+Version: 1.14.0
+Build Number: 202604200800-046
+
+[Added]
+1. Implement new API endpoints to enable storage box and location lookups via NFC tags and barcodes. (iOS App use it - ver 1.3.0 coming soon)
+2. Added Housekeeper Bee App download link on login page.
+
+---
 Release Date: 2026/04/13	
 Version: 1.13.1
 Build Number: 202604130800-045
